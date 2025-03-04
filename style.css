@@ -1,0 +1,150 @@
+body {
+    font-family: system-ui, sans-serif;
+    padding: 0;
+    background-color: #ffffff; 
+    color: #333333; 
+}
+
+/* HEADER */
+.header {
+    background-color: #ffffff; 
+    padding: 0px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #bbb8b8;
+}
+
+.header_container {
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #333333; 
+}
+.login {
+    width: 30px;
+    height: 30px;
+}
+
+/* MAIN CONTENT */
+.page_content {
+    max-width: 900px;  
+    margin: auto;  
+    padding: 0px;
+    height: 100%;
+}
+
+/* FAQ HEADER */
+.FAQ {
+    text-align: center;
+    color: #ffffff; /* White text for better contrast */
+    margin-bottom: 20px;
+    padding: 100px 20px; /* Increase padding for better spacing */
+    background-image: url(./FAQ.jpg);
+    background-size: cover;
+    background-position: left ;
+    max-width: 900px;
+}
+.crumbs ol {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    
+  }
+  
+  .crumb {
+    display: inline-block;
+  }
+  
+  .crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: ">";
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+  }
+  
+
+
+/* SECTION HEADINGS */
+h3 {
+    color: #333333;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+/* FAQ BOXES */
+details {
+    background-color: #f9f9f9;
+    border: 1px solid #bf9e9e;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 10px 0;
+
+}
+
+details summary {
+    font-weight: bold;
+    color: #333333;
+    font-size: 18px;
+}
+
+details p {
+    margin-top: 10px;
+    color: #333333;
+    font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+    color: #666666;
+    font-size: 14px;
+}
+
+a {
+    color: inherit;      /* Blaue highlight ausschalten */
+    text-decoration: none; /* Underline Ausschalten */
+}
+
+div:has(> blockquote) {
+    background-color: #ededed;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 50%;
+  }
+  
+
+
+  blockquote p::before {
+    content: "\201C";
+  }
+  
+  blockquote p::after {
+    content: "\201D";
+  }
+  
+  blockquote + p {
+    text-align: right;
+  }
+
+.foot {
+    margin-top: 60px;
+}
+
+
