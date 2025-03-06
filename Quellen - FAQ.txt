@@ -1,5 +1,6 @@
 FAQ.JPG - https://www.pexels.com/photo/person-swimming-on-body-of-water-863988/
 
+
 Logo - https://www.flaticon.com/free-icon/swimming_3437732?term=swim&page=1&position=2&origin=search&related_id=3437732
 
 Tutorials - https://www.youtube.com/watch?v=zHZRFwWQt2w
@@ -7,3 +8,11 @@ Tutorials - https://www.youtube.com/watch?v=zHZRFwWQt2w
 Text Inhalt - Chat GPT
 
 Log In Icon - https://www.flaticon.com/de/kostenloses-icon/mannlich_12117333?term=login&page=1&position=5&origin=search&related_id=12117333
+
+stadium.png https://www.flaticon.com/free-icon/stadium_2434676?term=stadium&page=1&position=3&origin=search&related_id=2434676
+
+writing.png https://www.flaticon.com/free-icon/writing_2593634?term=letter&page=1&position=11&origin=search&related_id=2593634
+
+calling.png https://www.flaticon.com/free-icon/phone-call_126509?term=phone&page=1&position=1&origin=search&related_id=126509
+
+location.png https://www.flaticon.com/free-icon/location_3222642?term=office&page=1&position=2&origin=search&related_id=3222642

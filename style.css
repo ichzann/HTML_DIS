@@ -84,7 +84,7 @@ h3 {
 }
 
 /* FAQ BOXES */
-details {
+.faq-details {
     background-color: #f9f9f9;
     border: 1px solid #bf9e9e;
     border-radius: 5px;
@@ -147,4 +147,36 @@ div:has(> blockquote) {
     margin-top: 60px;
 }
 
+.kontak_icon {
+    width: 70px;
+    height: 70px;
+}
+
+.icon_container {
+    display: block;
+}
+
+
+.kontak_unterelement{
+    background-color: #d3d3d3;
+    padding: 1%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.border_kontak{
+    background-color: #eeeded;
+    padding: 2%;
+    margin: 5%;
+}
+
+.kontakt-text {
+    text-align: center;
+    background-color: #faffe8;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
