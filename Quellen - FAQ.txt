@@ -16,3 +16,7 @@ writing.png https://www.flaticon.com/free-icon/writing_2593634?term=letter&page=
 calling.png https://www.flaticon.com/free-icon/phone-call_126509?term=phone&page=1&position=1&origin=search&related_id=126509
 
 location.png https://www.flaticon.com/free-icon/location_3222642?term=office&page=1&position=2&origin=search&related_id=3222642
+
+underwater-hockey.jpeg = https://whatson.townsville.qld.gov.au/events/under-water-hockey
+
+avatar bilder: https://avatarmaker.com/male/
