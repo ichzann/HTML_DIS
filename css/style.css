@@ -1,3 +1,27 @@
+:root {
+    /* globale CSS-Variablen 
+    - für farben,
+    - font-size
+    - padding,
+    - etc.*/
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-color: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+.darkmode {
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+  }
+
+
 body {
     font-family: system-ui, sans-serif;
     padding: 0;
