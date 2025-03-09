@@ -22,7 +22,7 @@
   }
 
 
-body {
+.bölüm_body {
     font-family: system-ui, sans-serif;
     padding: 0;
     background-color: #ffffff; 
@@ -30,7 +30,7 @@ body {
 }
 
 /* HEADER */
-.header {
+.bölüm_header {
     background-color: #ffffff; 
     padding: 0px;
     position: sticky;
@@ -39,7 +39,7 @@ body {
     border-bottom: 1px solid #bbb8b8;
 }
 
-.header_container {
+.bölüm_header_container {
     display: flex;
     align-items: center;  
     justify-content: space-between;
@@ -48,19 +48,19 @@ body {
     margin-bottom: 5px;
 }
 
-.logo {
+.bölüm_logo {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     border: 2px solid #333333; 
 }
-.login {
+.bölüm_login {
     width: 30px;
     height: 30px;
 }
 
 /* MAIN CONTENT */
-.page_content {
+.bölüm_page_content {
     max-width: 900px;  
     margin: auto;  
     padding: 0px;
@@ -68,32 +68,28 @@ body {
 }
 
 /* FAQ HEADER */
-.FAQ {
+.bölüm_FAQ {
     text-align: center;
     color: #ffffff; /* White text for better contrast */
     margin-bottom: 20px;
     padding: 100px 20px; /* Increase padding for better spacing */
-<<<<<<< HEAD
-    background-image: url(./FAQ.jpg);
-=======
     background-image: url(/bilder/FAQ.jpg);
->>>>>>> 732276a (Verlinkung Korrektur)
     background-size: cover;
     background-position: left ;
     max-width: 900px;
 }
-.crumbs ol {
+.bölüm_crumbs ol {
     display: flex;
     list-style-type: none;
     padding-left: 0;
     
   }
   
-  .crumb {
+  .bölüm_crumb {
     display: inline-block;
   }
   
-  .crumb a::after {
+  .bölüm_crumb a::after {
     display: inline-block;
     color: #000;
     content: ">";
@@ -112,7 +108,7 @@ h3 {
 }
 
 /* FAQ BOXES */
-.faq-details {
+.bölüm_faq-details {
     background-color: #f9f9f9;
     border: 1px solid #bf9e9e;
     border-radius: 5px;
@@ -121,7 +117,7 @@ h3 {
 
 }
 
-details summary {
+.bölüm_details summary {
     font-weight: bold;
     color: #333333;
     font-size: 18px;
@@ -134,7 +130,7 @@ details p {
 }
 
 /* FOOTER */
-footer {
+.bölüm_footer {
     text-align: center;
     padding: 15px;
     background-color: #ffffff;
@@ -171,11 +167,11 @@ div:has(> blockquote) {
     text-align: right;
   }
 
-.foot {
+  .foot { /* 2. footer ?*/
     margin-top: 60px;
 }
 
-.kontak_icon {
+.bölüm_kontak_icon {
     width: 70px;
     height: 70px;
 }
@@ -185,20 +181,20 @@ div:has(> blockquote) {
 }
 
 
-.kontak_unterelement{
+.bölüm_kontak_unterelement{
     background-color: #d3d3d3;
     padding: 1%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.border_kontak{
+.bölüm_border_kontak{
     background-color: #eeeded;
     padding: 2%;
     margin: 5%;
 }
 
-.kontakt-text {
+.bölüm_kontakt-text {
     text-align: center;
     background-color: #faffe8;
     margin-left: 10%;
@@ -208,40 +204,47 @@ div:has(> blockquote) {
     padding-bottom: 10px;
 }
 
-.team-titel{
+.bölüm_team-titel{
     display: flex;
 }
 
-.underwater-hockey-team img{
+.bölüm_underwater-hockey-team img{
     width: 350px;
     height: auto;
 }
 
-.team-titel-box{
+.bölüm_team-titel-box{
     background-color: #babbb839;
     padding-left: 5%;
     padding-top: 1%;
     margin-top: 40px;
     margin-bottom: 10%;
 }
+#aside-team{
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 1%;
+    margin-top: 40px;
+    margin-bottom: 10%;
+}
 
-.memers-box h1{
+.bölüm_memers-box h1{
     text-decoration: underline;
     padding-bottom: 7%;
 }
 
-.memers-box img{
+.bölüm_memers-box img{
     width: 9rem;
     align-self: center;
 }
 
 
-.memers{
+.bölüm_memers{
     display: flex;
     justify-content: center;  /* Align the memers (calass="memer")*/
 }
 
-.memer{
+.bölüm_memer{
     padding-left: 10px;
     padding-right: 10px;
 }

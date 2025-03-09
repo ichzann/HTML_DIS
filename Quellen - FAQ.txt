@@ -1,5 +1,8 @@
-FAQ.JPG - https://www.pexels.com/photo/person-swimming-on-body-of-water-863988/
+______
 
+Bölüm
+______
+FAQ.JPG - https://www.pexels.com/photo/person-swimming-on-body-of-water-863988/
 
 Logo - https://www.flaticon.com/free-icon/swimming_3437732?term=swim&page=1&position=2&origin=search&related_id=3437732
 
@@ -20,3 +23,12 @@ location.png https://www.flaticon.com/free-icon/location_3222642?term=office&pag
 underwater-hockey.jpeg = https://whatson.townsville.qld.gov.au/events/under-water-hockey
 
 avatar bilder: https://avatarmaker.com/male/
+
+Tutorial zu Nav https://developer.mozilla.org/de/docs/Web/HTML/Element/nav
+
+Tutorial zu picture https://www.w3schools.com/tags/tag_picture.asp
+
+______
+
+-Ende-
+______
