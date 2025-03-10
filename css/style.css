@@ -167,10 +167,6 @@ div:has(> blockquote) {
     text-align: right;
   }
 
-  .foot { /* 2. footer ?*/
-    margin-top: 60px;
-}
-
 .bölüm_kontak_icon {
     width: 70px;
     height: 70px;
