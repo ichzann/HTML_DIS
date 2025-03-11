@@ -141,7 +141,7 @@ details p {
 }
 
 a {
-    color: inherit;      /* Blaue highlight ausschalten */
+    color: inherit;        /* Blaue highlight ausschalten */
     text-decoration: none; /* Underline Ausschalten */
 }
 
@@ -172,7 +172,7 @@ div:has(> blockquote) {
     height: 70px;
 }
 
-.icon_container {
+.bölüm_icon_container {
     display: block;
 }
 
@@ -216,7 +216,8 @@ div:has(> blockquote) {
     margin-top: 40px;
     margin-bottom: 10%;
 }
-.aside-team{
+
+.bölüm_aside-team{
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
@@ -253,12 +254,12 @@ div:has(> blockquote) {
     padding-right: 10px;
 }
 
-.aside-container{
+.bölüm_aside-container{
     display: flex;
     justify-content: space-evenly;
 }
 
-#aside-login1{
+#bölüm_aside-login1{
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
@@ -273,7 +274,7 @@ div:has(> blockquote) {
     border-bottom:5px solid rgb(157, 147, 147);
 
 }
-#aside-login2{
+#bölüm_aside-login2{
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
@@ -289,7 +290,7 @@ div:has(> blockquote) {
 
 }
 
-#aside-login3{
+#bölüm_aside-login3{
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
@@ -303,4 +304,9 @@ div:has(> blockquote) {
     border-left:2px solid rgb(157, 147, 147);
     border-bottom:5px solid rgb(157, 147, 147);
 
+}
+
+#bölüm_eigentum-logo{
+    height: 2rem;
+    width: 2rem;
 }
