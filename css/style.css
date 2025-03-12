@@ -67,10 +67,10 @@
 
 
 .bölüm_page_content {
-    max-width: 56.25rem;  
+    max-width: 53rem;  
     margin: auto;  
-    padding: 0px;
-    height: 100%;
+
+
 }
 
 
@@ -239,13 +239,14 @@ div:has(> blockquote) {
 
 }
 
+
 .bölüm_memers-box h1{
     text-decoration: underline;
     padding-bottom: 7%;
 }
 
 .bölüm_memers-box img{
-    width: 9rem;
+    width: 8rem;
     align-self: center;
 }
 
@@ -253,6 +254,9 @@ div:has(> blockquote) {
 .bölüm_memers{
     display: flex;
     justify-content: center;  /* Align the memers (calass="memer")*/
+    margin: auto;
+    padding: auto;
+
 }
 
 .bölüm_memer{
