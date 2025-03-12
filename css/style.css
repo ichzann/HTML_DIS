@@ -21,7 +21,7 @@
     --accent-color: #0071ff;
   }
 
-
+/* BÖLM Start */
 .bölüm_body {
     font-family: system-ui, sans-serif;
     padding: 0;
@@ -136,7 +136,7 @@ details p {
     font-size: 16px;
 }
 
-/* FOOTER */
+
 .bölüm_footer {
     text-align: center;
     padding: 15px;
@@ -291,3 +291,4 @@ div:has(> blockquote) {
 
 }
 
+/* BÖLM Start */
