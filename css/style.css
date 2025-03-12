@@ -292,3 +292,123 @@ div:has(> blockquote) {
 }
 
 /* BÖLM Start */
+
+:root {
+    /* Globale CSS-Variablen */
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-color: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+.darkmode {
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+/* Body */
+.bölüm_body {
+    font-family: system-ui, sans-serif;
+    padding: 0;
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+
+/* HEADER */
+.bölüm_header {
+    background-color: var(--base-color);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #bbb8b8;
+}
+
+.bölüm_header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px;
+    margin-bottom: 5px;
+}
+
+.bölüm_logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--text-color);
+}
+
+.bölüm_login {
+    width: 30px;
+    height: 30px;
+}
+
+/* Navigation */
+.bölüm_crumbs ol {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.bölüm_crumb {
+    margin-right: 10px;
+}
+
+.bölüm_crumb a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.bölüm_crumb a::after {
+    content: ">";
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+    color: var(--text-color);
+}
+
+/* Banner */
+.bölüm_banner {
+    width: 100%;
+    height: 40vh; /* Banner nimmt exakt 40% der Fensterhöhe ein */
+    overflow: hidden;
+    background: url("../bilder/Homepage.jpg") center/cover no-repeat;
+}
+
+/* Main Content */
+.bölüm_page_content {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Contact Section */
+.contact_section {
+    background-color: #f8fbe9;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+.bölüm_footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--base-color);
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
