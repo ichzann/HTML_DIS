@@ -38,16 +38,16 @@
 	--text-color: #111528;
 	--secondary-color: #232738;	
 	--primary-color: #3a435d;
-	--accent-color: #0071ff;
+	--accent-color: #2486ff;
 }
 
 .darkmode {
 	--base-color: #070b1d;
 	--base-variant: #101425;
 	--text-color: #ffffff;
-	--secondary-text: #a4a5b8;
-	--primary-color: #3a435d;
-	--accent-color: #0071ff;
+	--secondary-color: #a4a5b8;
+	--primary-color: #69769c;
+	--accent-color: #2486ff;
 }
 
 
@@ -386,8 +386,8 @@ body.darkmode footer {
 }
 
 #bölüm_theme-switch{
-	height: 50px;
-	width: 50px;
+	height: 2rem;
+	width: 2rem;
 	padding: 0;
 	border-radius: 50%;
 	background-color: var(--base-variant);
@@ -395,8 +395,8 @@ body.darkmode footer {
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	top: 20px;
-	right: 20px;
+	top: 0.5rem;
+	right: 0.5rem;
 }
 
 #bölüm_theme-switch svg{
