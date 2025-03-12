@@ -53,10 +53,16 @@
     height: 4.375rem;
     border-radius: 50%;
     border: 2px solid #333333; 
+    margin-top: 0.6rem;
 }
 .bölüm_login {
     width: 2em;
     height: 2em;
+}
+
+.bölüm_eigentum-logo{
+    height: 2em;
+    width: 2em;
 }
 
 
@@ -282,7 +288,3 @@ div:has(> blockquote) {
 
 }
 
-#bölüm_eigentum-logo{
-    height: 2em;
-    width: 2em;
-}
