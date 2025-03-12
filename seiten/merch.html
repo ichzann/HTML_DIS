@@ -7,12 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Merch – Unterwasserhockey Team</title>
 	<link rel="stylesheet" href="../css/style2.css">
+	<script type="text/javascript" src="../js/darkmode.js" defer></script>
 </head>
 
 <body>
 	<!-- Hauptnavigationsmenü mit 12 Seiten -->
-	<nav>
-		<ul>
+    <nav>
+        <ul>
             <li><a href="../index.html" class="bölüm_navlink">Home</a></li>
             <li><a href="login.html" class="bölüm_navlink">Login</a></li>
             <li><a href="team.html" class="bölüm_navlink">Team</a></li>
@@ -23,15 +24,18 @@
             <li><a href="sponsoren.html" class="bölüm_navlink">Sponsoren</a></li>
             <li><a href="merch.html" class="bölüm_navlink">Merch</a></li>
             <li><a href="faq.html" class="bölüm_navlink">FAQ</a></li>
-            <li><a href="kontakt.html" class="bölüm_navlink">Kontakt</a></li>
-            <li><a href="impressum.html" class="bölüm_navlink">Impressum</a></li>
-		</ul>
-	</nav>
+        </ul>
+		<!-- Darkmode knopf -->
+        <button id="bölüm_theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        </button>
+    </nav>
 
 	<!-- Kopfbereich -->
 	<header>
 		<h1>Merchandise Shop</h1>
-		<p>Entdecken Sie exklusive Merchandising-Artikel unseres Unterwasserhockey Teams.</p>
+		<p>Entdecken Sie exklusive Merchandising-Artikel der Wuppertaler Haie.</p>
 	</header>
 
 	<!-- Hauptinhalt -->
@@ -42,7 +46,6 @@
 			<article>
 				<header>
 					<h3>Team T-Shirt</h3>
-					<time datetime="2025-03-15">15. März 2025</time>
 				</header>
 				<p>Hochwertiges Team T-Shirt aus Baumwolle in limitierter Auflage – perfekt für Fans und Spieler.</p>
 				<figure>
@@ -51,27 +54,26 @@
 						<source media="(min-width: 400px)" srcset="../bilder/tshirt_mittel.jpg">
 						<img src="../bilder/tshirt_klein.jpg" alt="Team T-Shirt" width="100%">
 					</picture>
-					<figcaption>Exklusives Team T-Shirt</figcaption>
+					<figcaption>Exklusives Team T-Shirt in modernen Anthrazit.</figcaption>
 				</figure>
 				<details>
 					<summary>Weitere Informationen</summary>
-					<p>Material: atmungsaktiver Polyester; Größen: S, M, L, XL. Nur solange der Vorrat reicht.</p>
+					<p>Material: atmungsaktive Baumwolle <br> Größen: S, M, L, XL. <br> Nur solange der Vorrat reicht.</p>
 				</details>
 			</article>
 
 			<article>
 				<header>
 					<h3>Fan Cap</h3>
-					<time datetime="2025-03-10">10. März 2025</time>
 				</header>
-				<p>Stylische Fan Cap, die unser Teamlogo prominent präsentiert.</p>
+				<p>Stylische Fan Cap. Mehr Wuppertaler Haie geht nicht!</p>
 				<figure>
 					<img src="../bilder/cap.jpg" alt="Fan Cap" width="100%">
-					<figcaption>Offizielle Fan Cap</figcaption>
+					<figcaption>Offizielle Fan Cap.</figcaption>
 				</figure>
 				<details>
 					<summary>Weitere Details</summary>
-					<p>Verfügbar in verschiedenen Farben, 100% Baumwolle – ideal für sonnige Tage. Spart jeglichen Frisörbesuch für min. 3 Monate</p>
+					<p>Verfügbar in verschiedenen Farben, 100% Baumwolle – ideal für sonnige Tage. Spart jeglichen Frisörbesuch für mindestens 3 Monate</p>
 				</details>
 			</article>
 		</section>
@@ -111,43 +113,39 @@
 				<p>"Mit unserem Merch tragen Sie nicht nur Ihr Team, sondern auch Ihre Leidenschaft."</p>
 			</blockquote>
 
-			<p>Weitere exklusive Artikel finden Sie in unserem Online-Shop.</p>
+			<p>Weitere exklusive Artikel folgen demnächst... &#128526</p>
 		</section>
 	</main>
 
 	<!-- Zwei aside Elemente mit weiterführenden Informationen -->
 	<aside>
 		<h3>Rabattaktionen</h3>
-		<p>Informieren Sie sich über aktuelle Rabattaktionen und Sonderangebote auf unserer <a href="news.html"
+		<p>Informieren Sie sich über aktuelle Rabattaktionen und Sonderangebote auf unserer <a href="news_feed.html"
 				class="bölüm_link">News Feed</a> Seite.</p>
-		<small>Quelle: Interne Promotion</small>
 	</aside>
 
 	<aside>
 		<h3>Versand &amp; Rückgabe</h3>
 		<p>Erfahren Sie mehr über unsere Versandbedingungen und Rückgaberechte in den <a href="faq.html"
 				class="bölüm_link">FAQ</a>.</p>
-		<small>Quelle: Kundenservice</small>
 	</aside>
 
 	<!-- Fußbereich -->
 	<footer>
-		<p>&copy; 2025 Unterwasserhockey Team. Alle Rechte vorbehalten.</p>
-		<p>Impressum: <a href="impressum.html" class="bölüm_link">Hier klicken</a></p>
-	</footer>
-
 	<!-- Zusätzliche Navigation mit internen und externen Links -->
 	<nav>
 		<ul>
+			<li><a href="kontakt.html" class="bölüm_navlink">Kontakt</a></li>
 			<li><a href="about_us.html" class="bölüm_link">About Us</a></li>
 			<li><a href="team.html" class="bölüm_link">Team</a></li>
 			<li><a href="news.html" class="bölüm_link">News Feed</a></li>
 			<li><a href="spielplan.html" class="bölüm_link">Spielplan</a></li>
-			<li><a href="https://www.wikipedia.org" target="_blank" rel="noopener" class="bölüm_link">Wikipedia</a>
-			</li>
-			<li><a href="https://www.olympic.org" target="_blank" rel="noopener" class="bölüm_link">Olympic News</a>
-			</li>
+			<li><a href="https://www.wikipedia.org" target="_blank" rel="noopener" class="bölüm_link">Wikipedia</a></li>
+			<li><a href="https://www.olympic.org" target="_blank" rel="noopener" class="bölüm_link">Olympic News</a></li>
 		</ul>
 	</nav>
+	<p>Impressum: <a href="impressum.html" class="bölüm_link">Hier klicken</a></p>
+	<p>&copy; 2025 Wuppertaler Haie. Alle Rechte vorbehalten.</p>
+	</footer>
 </body>
 </html>
