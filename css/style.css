@@ -212,8 +212,7 @@ div:has(> blockquote) {
 }
 
 .bölüm_underwater-hockey-team img{
-    width: 350px;
-    height: auto;
+    width: 21.875rem;
 }
 
 .bölüm_team-titel-box{
@@ -263,7 +262,7 @@ div:has(> blockquote) {
 
 .bölüm_aside-container{
     display: flex;
-    justify-content: space-evenly;
+
 }
 
 #bölüm_aside-login1{
