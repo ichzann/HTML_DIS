@@ -1,0 +1,413 @@
+/* =====================================================
+   Custom CSS für Unterwasserhockey Team Website
+   =====================================================
+   Diese CSS-Datei orientiert sich an den Vorgaben aus 
+   style.css und passt sich den Klassen der HTML-Seiten 
+   (z. B. .bölüm_navlink und .bölüm_link) an.
+   Zudem wird eine benutzerdefinierte Schriftart aus 
+   einem Unterordner (fonts) geladen.
+   ===================================================== */
+
+
+/* -------------------------------
+   1. Schriftart einbinden
+   -------------------------------
+   @font-face bindet eine lokale Schriftart ein, sodass 
+   diese in der gesamten Seite verwendet werden kann.
+   Passe den Pfad und Dateinamen bei Bedarf an.
+---------------------------------- */
+@font-face {
+	font-family: 'MyCustomFont';
+	src: url('../fonts/MyCustomFont.woff2') format('woff2'),
+		url('../fonts/MyCustomFont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* -------------------------------
+   2. Farbvariablen definieren
+   -------------------------------
+   Durch die Nutzung von CSS-Variablen in :root können 
+   Farben zentral verwaltet werden. Änderungen sind so 
+   an einer Stelle möglich.
+---------------------------------- */
+:root {
+	--base-color: white;
+	--base-variant: #e8e9ed;
+	--text-color: #111528;
+	--secondary-color: #232738;	
+	--primary-color: #3a435d;
+	--accent-color: #2486ff;
+}
+
+.darkmode {
+	--base-color: #070b1d;
+	--base-variant: #101425;
+	--text-color: #ffffff;
+	--secondary-color: #a4a5b8;
+	--primary-color: #69769c;
+	--accent-color: #2486ff;
+}
+
+
+/* -------------------------------
+   3. Globale Basisstile
+   -------------------------------
+   Hier wird die Grundformatierung für den gesamten Body 
+   festgelegt – Schriftart, Hintergrund, Textfarbe, 
+   Margin und Padding.
+---------------------------------- */
+body {
+	font-family: 'MyCustomFont', system-ui, sans-serif;
+	background-color: var(--base-color);
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+
+
+/* -------------------------------
+   4. Link-Stile
+   -------------------------------
+   Links erhalten die Akzentfarbe und wechseln beim Hover 
+   zu einer anderen Farbe, um Interaktivität zu signalisieren.
+---------------------------------- */
+a {
+	color: var(--accent-color);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: var(--primary-color);
+}
+
+
+/* -------------------------------
+   5. Navigation
+   -------------------------------
+   Das <nav>-Element und dessen untergeordnete UL/LI-Elemente 
+   werden gestylt. Dabei werden auch die speziellen Klassen 
+   .bölüm_navlink und .bölüm_link berücksichtigt.
+---------------------------------- */
+nav {
+	background-color: var(--base-variant);
+	padding: 10px;
+}
+
+nav ul {
+	list-style: none;
+	/* Entfernt Standard-Punkte der Liste */
+	margin: 0;
+	padding: 0;
+	display: flex;
+	/* Horizontale Anordnung der Links */
+	flex-wrap: wrap;
+	/* Zeilenumbruch bei kleinen Bildschirmen */
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+/* Styling der spezifischen Navigations-Links */
+.bölüm_navlink,
+.bölüm_link {
+	padding: 8px 12px;
+	border-radius: 4px;
+	/* Abgerundete Ecken für Buttons */
+}
+
+.bölüm_navlink:hover,
+.bölüm_link:hover {
+	background-color: var(--primary-color);
+	color: var(--base-color);
+}
+
+nav:first-of-type {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: var(--base-variant); 
+	width: 100%;
+}
+
+/* -------------------------------
+   6. Header-Bereich
+   -------------------------------
+   Der Kopfbereich der Seite wird zentriert und mit einem 
+   Hintergrund versehen, der die Überschrift und Einleitung 
+   hervorhebt.
+---------------------------------- */
+header {
+	padding: 20px;
+	background-color: var(--base-variant);
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 2em;
+	color: var(--primary-color);
+}
+
+header p {
+	margin: 10px 0 0;
+	font-size: 1.2em;
+}
+
+
+/* -------------------------------
+   7. Hauptinhalt (main)
+   -------------------------------
+   Der Hauptbereich wird zentriert, bekommt ein maximales 
+   Layout und ausreichend Innenabstand.
+---------------------------------- */
+main {
+	max-width: 1000px;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+/* Abstand zwischen den inhaltlichen Sektionen */
+main section {
+	margin-bottom: 40px;
+}
+
+/* Überschriften in den Sektionen */
+main section h2 {
+	color: var(--secondary-color);
+	margin-bottom: 15px;
+	border-bottom: 2px solid var(--accent-color);
+	padding-bottom: 5px;
+}
+
+
+/* -------------------------------
+   8. Artikel innerhalb von Sections
+   -------------------------------
+   Artikel (z. B. in der News- oder Merch-Seite) werden mit 
+   eigenen Abständen und Schriftgrößen formatiert.
+---------------------------------- */
+article {
+	margin-bottom: 20px;
+}
+
+article header h3 {
+	margin: 0;
+	font-size: 1.5em;
+	color: var(--primary-color);
+}
+
+article header time {
+	font-size: 0.9em;
+	color: var(--secondary-color);
+}
+
+
+/* -------------------------------
+   9. Tabellen
+   -------------------------------
+   Tabellen werden so formatiert, dass sie den verfügbaren 
+   Platz ausnutzen und klare Abstände sowie Rahmen haben.
+---------------------------------- */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+table caption {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	text-align: left;
+	color: var(--primary-color);
+}
+
+/* Rahmen für Tabelle, Zellen und Kopfzellen */
+table,
+th,
+td {
+	border: 1px solid var(--base-variant);
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: left;
+}
+
+
+/* -------------------------------
+   10. Blockquotes
+   -------------------------------
+   Blockquotes werden mit einem Hintergrund und einer 
+   farbigen Linie hervorgehoben, um Zitate optisch zu 
+   betonen.
+---------------------------------- */
+blockquote {
+	background-color: var(--base-variant);
+	border-left: 4px solid var(--accent-color);
+	padding: 10px 20px;
+	margin: 20px 0;
+	font-style: italic;
+	color: var(--secondary-color);
+}
+
+blockquote p {
+	margin: 0;
+}
+
+
+/* -------------------------------
+   11. Abbildungen und Figuren
+   -------------------------------
+   Bilder in <figure> erhalten einen Abstand, und 
+   Beschriftungen (figcaption) werden zentriert und 
+   farblich angepasst.
+---------------------------------- */
+figure {
+	margin: 20px 0;
+}
+
+figcaption {
+	text-align: center;
+	font-size: 0.9em;
+	color: var(--secondary-color);
+}
+
+
+/* -------------------------------
+   12. Details-Elemente
+   -------------------------------
+   Mit <details> und <summary> können zusätzliche 
+   Informationen ein- und ausgeblendet werden.
+---------------------------------- */
+details {
+	margin: 20px 0;
+	padding: 10px;
+	background-color: var(--base-variant);
+	border: 1px solid var(--primary-color);
+	border-radius: 4px;
+}
+
+details summary {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+/* -------------------------------
+   13. Asides
+   -------------------------------
+   Seitenleisten (aside) werden mit einem eigenen 
+   Hintergrund und Innenabstand hervorgehoben.
+---------------------------------- */
+aside {
+	background-color: var(--base-variant);
+	padding: 15px;
+	margin: 20px;
+	border-radius: 4px;
+}
+
+aside h3 {
+	margin-top: 0;
+	color: var(--primary-color);
+}
+
+
+/* -------------------------------
+   14. Footer
+   -------------------------------
+   Der Footer wird zentriert, erhält einen eigenen 
+   Hintergrund sowie einen oberen Rahmen, um ihn 
+   optisch abzugrenzen.
+---------------------------------- */
+footer {
+	background-color: var(--base-variant);
+	text-align: center;
+	padding: 15px;
+	font-size: 0.9em;
+	color: var(--secondary-color);
+	border-top: 1px solid var(--base-color);
+	margin-top: 40px;
+}
+
+
+/* -------------------------------
+   15. Responsive Bilder
+   -------------------------------
+   Bilder passen sich an den verfügbaren Platz an, ohne 
+   verzerrt zu werden.
+---------------------------------- */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* -------------------------------
+   16. Utility Klassen
+   -------------------------------
+   Eine einfache clearfix-Klasse, um Floating-Elemente 
+   zu bereinigen.
+---------------------------------- */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+/* -------------------------------
+   17. Optional: Dark Mode
+   -------------------------------
+   Falls der Dark Mode aktiviert wird (z. B. durch 
+   Hinzufügen der Klasse "darkmode" zum Body), werden 
+   Hintergrund und Textfarben angepasst.
+---------------------------------- */
+body.darkmode {
+	background-color: #070b1d;
+	color: #ffffff;
+}
+
+body.darkmode a {
+	color: var(--accent-color);
+}
+
+body.darkmode header {
+	background-color: #101425;
+}
+
+body.darkmode footer {
+	background-color: #101425;
+}
+
+#bölüm_theme-switch{
+	height: 2rem;
+	width: 2rem;
+	padding: 0;
+	border-radius: 50%;
+	background-color: var(--base-variant);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0.5rem;
+	right: 0.5rem;
+}
+
+#bölüm_theme-switch svg{
+	fill: var(--primary-color);
+}
+#bölüm_theme-switch svg:last-child{
+	display: none;
+}
+.darkmode #bölüm_theme-switch svg:first-child{
+	display: none;
+}
+.darkmode #bölüm_theme-switch svg:last-child{
+	display: block;
+}
