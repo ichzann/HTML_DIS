@@ -1,5 +1,4 @@
-<!-- Teammitglieder: Eric Jan Kirschke (11409054), M. Ihsan Bölüm (11411374), Simon Thein (Matrikel nr.) -->
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Teammitglieder: Eric Jan Kirschke (11409054), M. Ihsan Bölüm (11411374), Simon Thein (Matrikel nr.) -->
 <html lang="de">
     <head>
         <meta charset="UTF-8">
@@ -7,16 +6,18 @@
         <link rel="stylesheet" href="../css/style.css">  <!-- CSS-Verbindung -->
     </head>
     <body class="bölüm_body">
+        <nav class="bölüm_crumbs">
+            <ol>
+                <li class="bölüm_crumb"><a href="../seiten/index.html" >Home Page</a></li> <!-- Weiterführung zu Home Page( index.html ) -->
+                <li class="bölüm_crumb">Team</li>
+            </ol>
+        </nav>
         <!-- Header Section -->
-      
         <header class="bölüm_header">
             <section class="bölüm_header_container">
-                <nav class="crumbs">
-                    <ol>
-                        <li class="bölüm_crumb"><a href="../seiten/index.html" >Home Page</a></li> <!-- Weiterführung zu Home Page( index.html ) -->
-                        <li class="bölüm_crumb">Team</li>
-                    </ol>
-                </nav>
+                <a href="/seiten/index.html" title="Zur Startseite">   <!-- Weiterführung zu Home Page (index.html) -->
+                    <img class="bölüm_eigentum-logo" src="/bilder/eigentum.png" alt="Homepage Logo">
+                </a>
                 <a href="../seiten/index.html" title="Zur Startseite">   <!-- Weiterführung zu Home Page (index.html) -->
                     <img class="bölüm_logo" src="../bilder/swimming.png" alt="Team Logo">
                 </a>
@@ -101,22 +102,23 @@
                 </div>
             </section>         
         </main>
-        <aside id="aside-team">
+        <!-- zwei externe Hyperlinks -->
+        <aside class="bölüm_aside-team">
             <h2>Hey! Clicke für unser Socials</h2>
             <p>Folge uns auf unseren Social-Media-Kanälen, um keine Updates, spannende Einblicke und exklusive Inhalte zu verpassen. Wir freuen uns darauf, dich in unserer Community zu begrüßen!</p>
             <p style="color: blue;">
-                <a href="https://www.th-koeln.de" target="_blank">TH-Köln Webseite</a> /
                 <a href="https://www.instagram.com/th_koeln/?hl=de" target="_blank">Instagram</a> / 
                 <a href="https://www.facebook.com/technischehochschulekoeln/?locale=de_DE" target="_blank">Facebook</a>
             </p>
         </aside>
-        <aside id="aside-team">
+        <!-- 1 interner Hyperlink -->
+        <aside class="bölüm_aside-team">
             <h3>Hey!  Noch keinen Account?</h3>
             <p>Erstelle jetzt deinen persönlichen Account und werde Teil unserer Unterwasserhockey-Community! Mit einem Account kannst du dich für Events anmelden, Neuigkeiten erhalten und dich mit anderen Spielern austauschen.</p>
             <p style="color: blue;"><a href="../seiten/login.html">Jetzt Account erstellen</a></p>
         </aside>
-        <!-- Footer -->
-        <footer class="bölüm_footer">
+        <!-- Footer mit zwei interne Hyperlinks -->          <!--2+ interne Hyperlinks-->
+        <footer class="bölüm_footer">  
             <p>&copy; 2025 Unterwasser Hockey Team. Alle Rechte vorbehalten.</p>
             <p><a href="../seiten/impressum.html">Impressum</a></p>
             <p><a href="../seiten/kontakt.html">Kontak</a></p>

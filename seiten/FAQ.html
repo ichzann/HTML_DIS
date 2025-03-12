@@ -7,15 +7,17 @@
         <link rel="stylesheet" href="../css/style.css">  <!-- CSS-Verbindung -->
     </head>
     <body class="bölüm_body">
-        <!-- Header Section -->
+        <nav class="bölüm_crumbs">
+            <ol>
+                <li class="bölüm_crumb"><a href="./index.html" >Home Page</a></li> <!-- Weiterführung zu Home Page( index.html ) -->
+                <li class="bölüm_crumb">FAQ</li>
+            </ol>
+        </nav>
         <header class="bölüm_header">
             <section class="bölüm_header_container">
-                <nav class="bölüm_crumbs">
-                    <ol>
-                        <li class="bölüm_crumb"><a href="../index.html" >Home Page</a></li> <!-- Weiterführung zu Home Page( index.html ) -->
-                        <li class="bölüm_crumb">FAQ</li>
-                    </ol>
-                </nav>
+                <a href="/seiten/login.html">              <!-- Weiterführung zu Login Page (login.html) -->
+                    <img class="bölüm_login" src="../bilder/eigentum.png" alt="Home Icon">
+                </a>
                 <a href="../index.html" title="Zur Startseite">   <!-- Weiterführung zu Home Page (index.html) -->
                     <img class="bölüm_logo" src="../bilder/swimming.png" alt="Team Logo">
                 </a>
@@ -26,7 +28,7 @@
         </header>
         <!-- Hauptinhalt -->
         <main class="bölüm_page_content">
-            <h1 class="bölüm_FAQ">faq</h1>
+            <h1 class="bölüm_FAQ">FAQ</h1>
 
             <!-- FAQ-Abschnitte -->
             <section>
@@ -34,15 +36,15 @@
                 <details class="bölüm_faq-details">
                     <summary>Was ist Unterwasser-Hockey?</summary> <!-- Was angezeit ist -->
                     <p>Unterwasser-Hockey ist ein aufregender Teamsport, der im Schwimmbecken gespielt wird. Zwei Mannschaften versuchen, einen Puck mit Schlägern ins gegnerische Tor zu befördern – alles unter Wasser!</p>    <!--wenn man aufklappt -->
-                </br>
-                <div>
-                    <blockquote>    <!-- ausgedahte Quote von mir -->
-                      <p>
-                        Schwimmen ist gesund. Man soll schwimmen und schwimmen und schwimmen. 
-                      </p>
-                    </blockquote>
-                    <p>—M. Ihsan Bölüm, Interview mit Jan Kirchke</p>
-                  </div>
+                   
+                    <div>
+                        <blockquote>    <!-- ausgedahte Quote von mir -->
+                            <p>
+                            Schwimmmenn ist gesund. Man soll schwimmen und schwimmen und schwimmen. 
+                            </p>
+                        </blockquote>
+                        <p>—M. Ihsan Bölüm, Interview mit Jan Kirchke</p>
+                    </div>
                 </details>
                 <details class="bölüm_faq-details">
                     <summary>Wie kann ich Mitglied im Team werden?</summary>
@@ -54,15 +56,16 @@
             <section>
                 <h2>Training und Ausrüstung</h2>
                 <details class="bölüm_faq-details">
-                    <summary>Welche Ausrüstung brauche ich?</summary>
-                    <p>Du benötigst eine Schwimmbrille, Schnorchel, Flossen, einen Handschuh und einen Unterwasser-Hockeyschläger. Alles andere stellen wir zur Verfügung.</p>
+                    <summary>Welche Ausrüstung brauche ich?</summary> <!--Durch Details Tag, aufklappbare Fenster-->
+                    <p>Du benötigst eine Schwimmbrille, Schnorchel, Flossen, einen Handschuh und einen Unterwasser-Hockeyschläger. Alles andere stellen wir zur Verfügung. Unsere Schwimmbrille Empfehlung </p>
+                    <p>Unsere Schwimmbrille Empfehlung: <a href="https://de.speedo.com/schwimmbrillen.list" target="_blank" style="color: blue;">Speedo</a></p>
+                    <p>Unsere Trockenschnorchel Empfehlung: <a href="https://www.tauchversand.com/itaca-ultra-dry-trockenschnorchel-von-cressi-mit-silikonmundstueck-schwarz?c=3594" target="_blank" style="color: blue;">Cressi</a></p>
                 </details>
                 <details class="bölüm_faq-details">
                     <summary>Wann und wo findet das Training statt?</summary>
                     <p>Wir trainieren jeden Dienstag und Donnerstag von 18:00 bis 20:00 Uhr im Stadtbad. Neueinsteiger sind immer willkommen!</p>
                 </details>
             </section>
-
             <section>
                 <h2>Wettkämpfe und Turniere</h2>
                 <details class="bölüm_faq-details">
@@ -74,14 +77,23 @@
                     <p>Natürlich! Wir haben Teams für alle Spielstärken, von Anfängern bis zu Profis. Sprich uns einfach an, und wir finden das passende Team für dich.</p>
                 </details>
             </section>
-
+        </main>
+        <aside class="bölüm_aside-team">
+            <h2>Hey! Clicke für unser Socials</h2>
+            <p>Folge uns auf unseren Social-Media-Kanälen, um keine Updates, spannende Einblicke und exklusive Inhalte zu verpassen. Wir freuen uns darauf, dich in unserer Community zu begrüßen!</p>
+            <p style="color: blue;">
+                <a href="https://www.instagram.com/th_koeln/?hl=de" target="_blank">Instagram</a> / 
+                <a href="https://www.facebook.com/technischehochschulekoeln/?locale=de_DE" target="_blank">Facebook</a>
+            </p>
+        </aside>
+        <main class="bölüm_page_content"> 
             <section>
                 <h2>Für Neueinsteiger</h2>
                 <details class="bölüm_faq-details">
                     <summary>Brauche ich Vorkenntnisse?</summary>
                     <p>Nein, du brauchst keine Vorkenntnisse. Wir helfen dir, alles von Grund auf zu lernen – vom Tauchen bis zum Spielen.</p>
                 </details>
-                <details>
+                <details class="bölüm_faq-details">
                     <summary>Was muss ich zum ersten Training mitbringen?</summary>
                     <p>Bring Badekleidung, ein Handtuch und gute Laune mit. Die restliche Ausrüstung stellen wir dir für den Anfang zur Verfügung.</p>
                 </details>
@@ -102,8 +114,13 @@
                     <p>Jeder, der schwimmen kann und Lust auf Teamgeist und Action hat, ist bei uns willkommen – egal ob jung oder alt, Anfänger oder Profi.</p>
                 </details>
             </section>
-    
         </main>
+        <!-- Aside -->
+        <aside class="bölüm_aside-team" >
+            <h3>Hey!  Noch keinen Account?</h3>
+            <p>Erstelle jetzt deinen persönlichen Account und werde Teil unserer Unterwasserhockey-Community! Mit einem Account kannst du dich für Events anmelden, Neuigkeiten erhalten und dich mit anderen Spielern austauschen.</p>
+            <p style="color: blue;"><a href="/seiten/login.html">Jetzt Account erstellen</a></p>
+        </aside>    
         <!-- Footer -->
         <footer class="bölüm_footer">
             <p>&copy; 2025 Unterwasser Hockey Team. Alle Rechte vorbehalten.</p>

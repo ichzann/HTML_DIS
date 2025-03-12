@@ -1,7 +1,9 @@
-______
+_______________
 
-Bölüm
-______
+-Anfang Bölüm- 
+
+_______________
+
 FAQ.JPG - https://www.pexels.com/photo/person-swimming-on-body-of-water-863988/
 
 Logo - https://www.flaticon.com/free-icon/swimming_3437732?term=swim&page=1&position=2&origin=search&related_id=3437732
@@ -28,7 +30,8 @@ Tutorial zu Nav https://developer.mozilla.org/de/docs/Web/HTML/Element/nav
 
 Tutorial zu picture https://www.w3schools.com/tags/tag_picture.asp
 
-______
+_______________
 
--Ende-
-______
+-Ende Bölüm-
+
+_______________
