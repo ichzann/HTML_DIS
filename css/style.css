@@ -1,414 +1,564 @@
+/* =====================================================
+   Custom CSS für Unterwasserhockey Team Website
+   =====================================================
+   Diese CSS-Datei orientiert sich an den Vorgaben aus 
+   style.css und passt sich den Klassen der HTML-Seiten 
+   (z. B. .bölüm_navlink und .bölüm_link) an.
+   Zudem wird eine benutzerdefinierte Schriftart aus 
+   einem Unterordner (fonts) geladen.
+   ===================================================== */
+
+
+/* -------------------------------
+   1. Schriftart einbinden
+   -------------------------------
+   @font-face bindet eine lokale Schriftart ein, sodass 
+   diese in der gesamten Seite verwendet werden kann.
+   Passe den Pfad und Dateinamen bei Bedarf an.
+---------------------------------- */
+@font-face {
+	font-family: 'MyCustomFont';
+	src: url('../fonts/MyCustomFont.woff2') format('woff2'),
+		url('../fonts/MyCustomFont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* -------------------------------
+   2. Farbvariablen definieren
+   -------------------------------
+   Durch die Nutzung von CSS-Variablen in :root können 
+   Farben zentral verwaltet werden. Änderungen sind so 
+   an einer Stelle möglich.
+---------------------------------- */
 :root {
-    /* globale CSS-Variablen 
-    - für farben,
-    - font-size
-    - padding,
-    - etc.*/
-    --base-color: white;
-    --base-variant: #e8e9ed;
-    --text-color: #111528;
-    --secondary-color: #232738;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
+	--base-color: white;
+	--base-variant: #e8e9ed;
+	--text-color: #111528;
+	--secondary-color: #232738;
+	--primary-color: #3a435d;
+	--accent-color: #2486ff;
 }
 
 .darkmode {
-    --base-color: #070b1d;
-    --base-variant: #101425;
-    --text-color: #ffffff;
-    --secondary-text: #a4a5b8;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
-  }
-
-/* BÖLM Start */
-.bölüm_body {
-    font-family: system-ui, sans-serif;
-    padding: 0;
-    background-color: #ffffff; 
-    color: #333333; 
+	--base-color: #070b1d;
+	--base-variant: #101425;
+	--text-color: #ffffff;
+	--secondary-color: #a4a5b8;
+	--primary-color: #69769c;
+	--accent-color: #2486ff;
 }
 
 
-.bölüm_header {
-    background-color: #ffffff; 
-    padding: 0px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    border-bottom: 1px solid #bbb8b8;
-}
-
-.bölüm_header_container {
-    display: flex;
-    align-items: center;  
-    justify-content: space-between;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin-bottom: 0.7rem;
-}
-
-.bölüm_logo {
-    width: 4.375rem;
-    height: 4.375rem;
-    border-radius: 50%;
-    border: 2px solid #333333; 
-    margin-top: 0.6rem;
-}
-.bölüm_login {
-    width: 2em;
-    height: 2em;
-}
-
-.bölüm_eigentum-logo{
-    height: 2em;
-    width: 2em;
+/* -------------------------------
+   3. Globale Basisstile
+   -------------------------------
+   Hier wird die Grundformatierung für den gesamten Body 
+   festgelegt – Schriftart, Hintergrund, Textfarbe, 
+   Margin und Padding.
+---------------------------------- */
+body {
+	font-family: 'MyCustomFont', system-ui, sans-serif;
+	background-color: var(--base-color);
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
 }
 
 
-.bölüm_page_content {
-    max-width: 53rem;  
-    margin: auto;  
-
-
-}
-
-
-.bölüm_FAQ {
-    text-align: center;
-    color: #d2f9c1;
-    margin-bottom: 1.2rem;
-    padding: 6.25rem; 
-    background-image: url(/bilder/FAQ.jpg);
-    background-size: cover;
-    background-position: left ;
-    max-width: 50rem;
-}
-
-.bölüm_crumbs{
-    background-color: #ffffff;
-}
-
-
-.bölüm_crumbs ol {
-    display: flex;
-    list-style-type: none; /*Aufzählungsfuntion von ol tag deaktivieren*/
-    padding-left: 0;
-    
-  }
-  
-  .bölüm_crumb a:after { 
-    color: #000;
-    content: ">";
-    font-size: 80%;
-    font-weight: bold;
-    padding: 0.3rem;
-  }
-  
-
-
-
-h3 {
-    color: #333333;
-    margin-top: 1.875rem;
-    font-size: 1.25rem;
-}
-
-
-.bölüm_faq-details {
-    background-color: #f9f9f9;
-    border: 1px solid #bf9e9e;
-    border-radius: 5px;
-    padding: 0.625rem;
-    margin: 0.625rem;
-
-}
-
-.bölüm_details summary {
-    font-weight: bold;
-    color: #333333;
-    font-size: 18px;
-}
-
-details p {
-    margin-top: 0.625rem;
-    color: #333333;
-    font-size: 16px;
-}
-
-
-.bölüm_footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #ffffff;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 0.625rem;
-    color: #666666;
-    font-size: 14px;
-}
-
+/* -------------------------------
+   4. Link-Stile
+   -------------------------------
+   Links erhalten die Akzentfarbe und wechseln beim Hover 
+   zu einer anderen Farbe, um Interaktivität zu signalisieren.
+---------------------------------- */
 a {
-    color: inherit;        /* Blaue highlight ausschalten */
-    text-decoration: none; /* Underline Ausschalten */
+	color: var(--accent-color);
+	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
-div:has(> blockquote) {
-    background-color: #ededed;
-    margin: auto;
-    padding: 0.625rem;
-    border-radius: 5px;
-    margin-left: 50%;
-  }
-  
+a:hover {
+	color: var(--primary-color);
+}
 
 
-  blockquote p::before {
-    content: "\201C";
-  }
-  
-  blockquote p::after {
-    content: "\201D";
-  }
-  
-  blockquote + p {
-    text-align: right;
-  }
+/* -------------------------------
+   5. Navigation
+   -------------------------------
+   Das <nav>-Element und dessen untergeordnete UL/LI-Elemente 
+   werden gestylt. Dabei werden auch die speziellen Klassen 
+   .bölüm_navlink und .bölüm_link berücksichtigt.
+---------------------------------- */
+nav {
+	background-color: var(--base-variant);
+	padding: 10px;
+}
+
+nav ul {
+	list-style: none;
+	/* Entfernt Standard-Punkte der Liste */
+	margin: 0;
+	padding: 0;
+	display: flex;
+	/* Horizontale Anordnung der Links */
+	flex-wrap: wrap;
+	/* Zeilenumbruch bei kleinen Bildschirmen */
+}
+
+nav ul li {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.bölüm_navlink:hover .icon {
+	filter: brightness(1000);
+}
+
+nav ul li a.bölüm_navlink:hover {
+	background-color: var(--primary-color);
+	color: var(--base-color);
+}
+
+
+/* Styling der spezifischen Navigations-Links */
+.bölüm_navlink,
+.bölüm_link {
+	padding: 8px 12px;
+	border-radius: 4px;
+	/* Abgerundete Ecken für Buttons */
+}
+
+.bölüm_navlink:hover,
+.bölüm_link:hover {
+	background-color: var(--primary-color);
+	color: var(--base-color);
+}
+
+nav:first-of-type {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: var(--base-variant);
+	width: 100%;
+}
+
+.bölüm_page-nav {
+	display: flex;
+	justify-content: center;
+	z-index : auto;
+	position: relative;
+}
+
+.bölüm_page-nav ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	z-index : 100;
+	margin: 0;
+}
+
+.bölüm_page-nav li {
+	margin: 0 10px;
+	z-index: 100;
+	/* Abstand zwischen den Navigationselementen */
+}
+
+/* -------------------------------
+   6. Header-Bereich
+   -------------------------------
+   Der Kopfbereich der Seite wird zentriert und mit einem 
+   Hintergrund versehen, der die Überschrift und Einleitung 
+   hervorhebt.
+---------------------------------- */
+header {
+	padding: 20px;
+	background-color: var(--base-variant);
+	text-align: center;
+	position: relative;
+	z-index: 10;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 2em;
+	color: var(--primary-color);
+}
+
+header p {
+	margin: 10px 0 0;
+	font-size: 1.2em;
+}
+
+
+/* -------------------------------
+   7. Hauptinhalt (main)
+   -------------------------------
+   Der Hauptbereich wird zentriert, bekommt ein maximales 
+   Layout und ausreichend Innenabstand.
+---------------------------------- */
+main {
+	max-width: 1000px;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+/* Abstand zwischen den inhaltlichen Sektionen */
+main section {
+	margin-bottom: 40px;
+}
+
+/* Überschriften in den Sektionen */
+main section h2 {
+	color: var(--secondary-color);
+	margin-bottom: 15px;
+	border-bottom: 2px solid var(--accent-color);
+	padding-bottom: 5px;
+}
+
+
+/* -------------------------------
+   8. Artikel innerhalb von Sections
+   -------------------------------
+   Artikel (z. B. in der News- oder Merch-Seite) werden mit 
+   eigenen Abständen und Schriftgrößen formatiert.
+---------------------------------- */
+article {
+	margin-bottom: 20px;
+}
+
+article header h3 {
+	margin: 0;
+	font-size: 1.5em;
+	color: var(--primary-color);
+}
+
+article header time {
+	font-size: 0.9em;
+	color: var(--secondary-color);
+}
+
+/* Platz über den Übersschriften, damit diese beim den interenen Link angezeigt werden */
+:target {
+	display: block;
+	position: relative;
+	padding-top: 65px;
+	margin-top: -65px;
+}
+
+/* -------------------------------
+   9. Tabellen
+   -------------------------------
+   Tabellen werden so formatiert, dass sie den verfügbaren 
+   Platz ausnutzen und klare Abstände sowie Rahmen haben.
+---------------------------------- */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+table caption {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	text-align: left;
+	color: var(--primary-color);
+}
+
+/* Rahmen für Tabelle, Zellen und Kopfzellen */
+table,
+th,
+td {
+	border: 1px solid var(--base-variant);
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: left;
+}
+
+
+/* -------------------------------
+   10. Blockquotes
+   -------------------------------
+   Blockquotes werden mit einem Hintergrund und einer 
+   farbigen Linie hervorgehoben, um Zitate optisch zu 
+   betonen.
+---------------------------------- */
+blockquote {
+	background-color: var(--base-variant);
+	border-left: 4px solid var(--accent-color);
+	padding: 10px 20px;
+	margin: 20px 0;
+	font-style: italic;
+	color: var(--secondary-color);
+}
+
+blockquote p {
+	margin: 0;
+}
+
+
+/* -------------------------------
+   11. Abbildungen und Figuren
+   -------------------------------
+   Bilder in <figure> erhalten einen Abstand, und 
+   Beschriftungen (figcaption) werden zentriert und 
+   farblich angepasst.
+---------------------------------- */
+figure {
+	margin: 20px 0;
+}
+
+figcaption {
+	text-align: center;
+	font-size: 0.9em;
+	color: var(--secondary-color);
+}
+
+
+/* -------------------------------
+   12. Details-Elemente
+   -------------------------------
+   Mit <details> und <summary> können zusätzliche 
+   Informationen ein- und ausgeblendet werden.
+---------------------------------- */
+details {
+	margin: 20px 0;
+	padding: 10px;
+	background-color: var(--base-variant);
+	border: 1px solid var(--primary-color);
+	border-radius: 4px;
+}
+
+details summary {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+/* -------------------------------
+   13. Asides
+   -------------------------------
+   Seitenleisten (aside) werden mit einem eigenen 
+   Hintergrund und Innenabstand hervorgehoben.
+---------------------------------- */
+aside {
+	background-color: var(--base-variant);
+	padding: 15px;
+	margin: 20px;
+	border-radius: 4px;
+}
+
+aside h3 {
+	margin-top: 0;
+	color: var(--primary-color);
+}
+
+
+/* -------------------------------
+   14. Footer
+   -------------------------------
+   Der Footer wird zentriert, erhält einen eigenen 
+   Hintergrund sowie einen oberen Rahmen, um ihn 
+   optisch abzugrenzen.
+---------------------------------- */
+footer {
+	background-color: var(--base-variant);
+	text-align: center;
+	padding: 15px;
+	font-size: 0.9em;
+	color: var(--secondary-color);
+	border-top: 1px solid var(--base-color);
+	margin-top: 40px;
+}
+
+footer nav ul {
+	background-color: var(--base-variant);
+	justify-content: center;
+	display: flex;
+	list-style-type: none;
+	padding: 15px;
+}
+
+footer nav ul li {
+	margin: 0 15px;
+}
+
+footer p {
+	text-align: center;
+}
+
+
+
+/* -------------------------------
+   15. Responsive Bilder
+   -------------------------------
+   Bilder passen sich an den verfügbaren Platz an, ohne 
+   verzerrt zu werden.
+---------------------------------- */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* -------------------------------
+   16. Utility Klassen
+   -------------------------------
+   Eine einfache clearfix-Klasse, um Floating-Elemente 
+   zu bereinigen.
+---------------------------------- */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+/* -------------------------------
+   17. Optional: Dark Mode
+   -------------------------------
+   Falls der Dark Mode aktiviert wird (z. B. durch 
+   Hinzufügen der Klasse "darkmode" zum Body), werden 
+   Hintergrund und Textfarben angepasst.
+---------------------------------- */
+body.darkmode {
+	background-color: #070b1d;
+	color: #ffffff;
+}
+
+body.darkmode a {
+	color: var(--accent-color);
+}
+
+body.darkmode header {
+	background-color: #101425;
+}
+
+body.darkmode footer {
+	background-color: #101425;
+}
+
+body.darkmode .bölüm_page-nav a:hover {
+	color: var(--primary-color);
+}
+
+#bölüm_theme-switch {
+	height: 2rem;
+	width: 2rem;
+	padding: 0;
+	border-radius: 50%;
+	background-color: var(--base-variant);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0.5rem;
+	right: 0.5rem;
+}
+
+#bölüm_theme-switch svg {
+	fill: var(--primary-color);
+}
+
+#bölüm_theme-switch svg:last-child {
+	display: none;
+}
+
+.darkmode #bölüm_theme-switch svg:first-child {
+	display: none;
+}
+
+.darkmode #bölüm_theme-switch svg:last-child {
+	display: block;
+}
+
+
+
+
+/*----------------
+
+Ihsan Css
+
+---------------*/
+.bölüm_background_img_titel {
+	text-align: center;
+	color: #fbfbff;
+	margin-bottom: 1.2rem;
+	padding: 6.25rem;
+	background-image: url(/bilder/FAQ.jpg);
+	background-size: cover;
+	background-position: left;
+	max-width: 50rem;
+}
 
 .bölüm_kontak_icon {
-    width: 70px;
-    height: 70px;
+	width: 4.3rem;
+	height: auto;
 }
 
-.bölüm_icon_container {
-    display: block;
+.bölüm_team-titel {
+	display: flex;
+	padding-right: 2rem;
 }
 
-
-.bölüm_kontak_unterelement{
-    background-color: #d3d3d3;
-    padding: 1%;
-    margin-top: 0.625rem;
-    margin-bottom: 0.625rem;
+.bölüm_underwater-hockey-team img {
+	width: 40rem;
+	padding-left: 1rem;
 }
 
-.bölüm_border_kontak{
-    background-color: #eeeded;
-    padding: 2%;
-    margin: 5%;
-}
-
-.bölüm_kontakt-text {
-    text-align: center;
-    background-color: #faffe8;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 2.5rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-}
-
-.bölüm_team-titel{
-    display: flex;
-}
-
-.bölüm_underwater-hockey-team img{
-    margin-left: 1rem;
-}
-
-.bölüm_team-titel-box{
-    background-color: #babbb839;
-    padding-left: 5%;
-    padding-top: 1%;
-    margin-top: 40px;
-    margin-bottom: 10%;
-}
-
-.bölüm_aside-team{
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
-    margin-top: 40px;
-    margin-bottom: 5%;
-    background-color: #fff9ee;
-    padding-bottom: 1%;
-    margin-left: 25%;
-    margin-right: 25%;
-    border: 1px solid rgb(219, 219, 219);                /* Shadow effect*/
-    border-left:3px solid rgb(157, 147, 147);
-    border-bottom:5px solid rgb(157, 147, 147);
-
+.bölüm_team-titel-box {
+	background-color: #babbb839;
+	padding-left: 5%;
+	padding-top: 1%;
+	margin-top: 40px;
+	margin-bottom: 10%;
 }
 
 
-.bölüm_memers-box h1{
-    text-decoration: underline;
-    padding-bottom: 7%;
+.bölüm_memers-box img {
+	width: 8rem;
+	align-self: center;
 }
 
-.bölüm_memers-box img{
-    width: 8rem;
-    align-self: center;
+.bölüm_memer {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 }
 
-
-.bölüm_memers{
-    display: flex;
-    justify-content: center;  /* Align the memers (calass="memer")*/
-    margin: auto;
-    padding: auto;
-
+.bölüm_memers {
+	display: flex;
+	justify-content: center;
+	/* Align the memers (calass="memer")*/
+	margin: auto;
+	padding: auto;
 }
 
-.bölüm_memer{
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+.icon {
+	width: 1.5rem;
+	height: auto;
 }
 
-.bölüm_aside-container{
-    display: flex;
-
+.sponsoren_container img {
+	max-width: 7rem;
+	height: auto;
 }
 
-#bölüm_aside-login1{
-    background-color: #eefff0;
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-}
-#bölüm_aside-login2{
-    background-color: #feffee;
-    margin-left: 0%;
-    margin-right: 0rem;
-
-
+.sponsoren_container {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: white;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
-#bölüm_aside-login3{
-    background-color: #eef6ff;
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-
-}
-
-/* BÖLM Start */
-
-:root {
-    /* Globale CSS-Variablen */
-    --base-color: white;
-    --base-variant: #e8e9ed;
-    --text-color: #111528;
-    --secondary-color: #232738;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
-}
-
-.darkmode {
-    --base-color: #070b1d;
-    --base-variant: #101425;
-    --text-color: #ffffff;
-    --secondary-text: #a4a5b8;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
-}
-
-/* Body */
-.bölüm_body {
-    font-family: system-ui, sans-serif;
-    padding: 0;
-    background-color: var(--base-color);
-    color: var(--text-color);
-}
-
-/* HEADER */
-.bölüm_header {
-    background-color: var(--base-color);
-    padding: 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    border-bottom: 1px solid #bbb8b8;
-}
-
-.bölüm_header_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 20px;
-    margin-bottom: 5px;
-}
-
-.bölüm_logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid var(--text-color);
-}
-
-.bölüm_login {
-    width: 30px;
-    height: 30px;
-}
-
-/* Navigation */
-.bölüm_crumbs ol {
-    display: flex;
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.bölüm_crumb {
-    margin-right: 10px;
-}
-
-.bölüm_crumb a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.bölüm_crumb a::after {
-    content: ">";
-    font-size: 80%;
-    font-weight: bold;
-    padding: 0 3px;
-    color: var(--text-color);
-}
-
-/* Banner */
-.bölüm_banner {
-    width: 100%;
-    height: 40vh; /* Banner nimmt exakt 40% der Fensterhöhe ein */
-    overflow: hidden;
-    background: url("../bilder/Homepage.jpg") center/cover no-repeat;
-}
-
-/* Main Content */
-.bölüm_page_content {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* Contact Section */
-.contact_section {
-    background-color: #f8fbe9;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Footer */
-.bölüm_footer {
-    text-align: center;
-    padding: 15px;
-    background-color: var(--base-color);
-    border-top: 1px solid #e0e0e0;
-    margin-top: 30px;
-    color: #666;
-    font-size: 14px;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
+#memers_zahl {
+	display: flex;
+	justify-self: center;
+	max-width: 30rem;
 }

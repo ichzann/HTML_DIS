@@ -1,106 +1,125 @@
-<!DOCTYPE html><!-- Teammitglieder: Eric Jan Kirschke (11409054), M. Ihsan Bölüm (11411374), Simon Thein (Matrikel nr.) -->
+<!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-        <link rel="stylesheet" href="../css/style2.css">
-        <script type="text/javascript" src="../js/darkmode.js" defer></script>
 
-    </head>
-    <body>
+<head>
+    <!-- Teammitglieder: Jan Kirschke (Matrikel Nr.: 11409054), M. Ihsan Bölüm (Matrikel Nr.: 11411374), Simon Thein (Matrikel Nr.: 11272298) -->
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/darkmode.js" defer></script>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html" class="bölüm_navlink">
+                    <img src="../bilder/eigentum.png" alt="haus Icon" class="icon"></a>
+            </li>
+            <li><a href="login.html" class="bölüm_navlink">
+                    <img src="../bilder/login.png" alt="Login Icon" class="icon"></a>
+            </li>
+            <li><a href="team.html" class="bölüm_navlink">Team</a></li>
+            <li><a href="news_feed.html" class="bölüm_navlink">News</a></li>
+            <li><a href="about_us.html" class="bölüm_navlink">About Us</a></li>
+            <li><a href="spielplan.html" class="bölüm_navlink">Spielplan</a></li>
+            <li><a href="arena.html" class="bölüm_navlink">Arena</a></li>
+            <li><a href="sponsoren.html" class="bölüm_navlink">Sponsoren</a></li>
+            <li><a href="merch.html" class="bölüm_navlink">Merch</a></li>
+            <li><a href="faq.html" class="bölüm_navlink">FAQ</a></li>
+        </ul>
+        <!-- Darkmode knopf -->
+        <button id="bölüm_theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                <path
+                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
+        </button>
+    </nav>
+    <header>
+        <h1>Sponsoren und Unterstützer</h1>
+        <p>Hier finden Sie unsere Sponsoren von <strong>Wuppertaler Hai!</strong></p>
+        <nav class="bölüm_page-nav">
+            <ul>
+                <li><a href="#palce1_sponsoren">Unsere Hauptsponsoren</a></li>
+                <li><a href="#palce2_sponsoren">Goldene Sponsoren</a></li>
+                <li><a href="#palce3_sponsoren">Silberne Sponsoren</a></li>
+                <li><a href="#palce4_sponsoren">Members</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="bölüm_page_content">
+        <section>
+            <h2 id="palce1_sponsoren">Unsere Hauptsponsoren</h2>
+            <div class="sponsoren_container">
+                <a href="https://www.adidas.de"><img src="../bilder/Adidas_Logo_1.png" alt="Adidas logo"></a>
+                <a href="https://www.volkswagen.de/de.html"><img src="../bilder/Volkswagen_Logo_1.png"
+                        alt="Volkswagen logo"></a>
+                <a href="https://www.apple.com"><img src="../bilder/Apple_Logo_0.svg" alt="Apple_Logo_0 logo"></a>
+                <a href="https://www.paypal.com/in/home"><img src="../bilder/PayPal_Logo_1.png" alt="Paypal_Logo"></a>
+            </div>
+            <h2 id="palce2_sponsoren">Goldene Sponsoren</h2>
+            <div class="sponsoren_container">
+                <a href="https://www.manutd.com/en/players-and-staff/first-team"><img
+                        src="../bilder/idjaUl7fIp_1741869481395.png" alt="Mancseter logo"></a>
+                <a href="https://www.mercedes-benz.de"><img src="../bilder/Mercedes-Benz_Logo_1.png"
+                        alt="Mercedes-Benz_Logo_1"></a>
+                <a href="https://www.nba.com"><img src="../bilder/NBA_id-njA-Hob_1.png" alt="nba logo"></a>
+            </div>
+            <h2 id="palce3_sponsoren">Kooperations Partner</h2>
+            <div class="sponsoren_container">
+                <a href="https://www.th-koeln.de"><img src="../bilder/TH_Köln_idDtqE_N8T_0.png" alt="th Köln logo"></a>
+                <a href="https://www.paypal.com/in/home"><img src="../bilder/PayPal_Logo_1.png" alt="paypal logo"></a>
+                <a href="https://www.wsj.com"><img src="../bilder/The_Wall_Street_Journal_id3HBaCHXd_1.png"
+                        alt="wasj logo"></a>
+            </div>
+            <h2 id="palce4_sponsoren">Unsere Unterstützer</h2>
+            <p>Unsere Unterstützer sind unsere Vereinmitglieder</p>
+            <div>
+                <a href="login.html"><img src="../bilder/text.svg" alt="Memberszahl" id="memers_zahl"></a>
+            </div>
+        </section>
+    </main>
+    <div class="bölüm_aside-container">
+        <!-- 2 externe hyper Links-->
+        <aside class="bölüm_aside-team">
+            <h3>Hey! Clicke für unser Socials</h3>
+            <p>Folge uns auf unseren Social-Media-Kanälen, um keine Updates, spannende Einblicke und exklusive Inhalte
+                zu verpassen. Wir freuen uns darauf, dich in unserer Community zu begrüßen!</p>
+            <p>
+                <a href="https://www.instagram.com/th_koeln/?hl=de" target="_blank">Instagram</a> /
+                <a href="https://www.facebook.com/technischehochschulekoeln/?locale=de_DE" target="_blank">Facebook</a>
+            </p>
+        </aside>
+        <!-- 1 interner Hyperlink -->
+        <aside class="bölüm_aside-team">
+            <h3>Hey! Noch keinen Account?</h3>
+            <p>Erstelle jetzt deinen persönlichen Account und werde Teil unserer Unterwasserhockey-Community! Mit einem
+                Account kannst du dich für Events anmelden, Neuigkeiten erhalten und dich mit anderen Spielern
+                austauschen.</p>
+            <p><a href="login.html">Jetzt Account erstellen</a></p>
+        </aside>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <!-- Zusätzliche Navigation mit internen und externen Hyperlinks -->
         <nav>
             <ul>
-                <li><a href="../index.html" class="bölüm_navlink">
-                    <img src="..../bilder/eigentum.png" alt="haus Icon" class="icon"></a>
+                <li><a href="kontakt.html" class="bölüm_navlink">Kontakt</a></li>
+                <li><a href="impressum.html" class="bölüm_link">Impressum</a></li>
+                <li><a href="https://www.wikipedia.org" target="_blank" rel="noopener" class="bölüm_link">Wikipedia</a>
                 </li>
-                <li><a href="login2.html" class="bölüm_navlink">
-                    <img src="..../bilder/login.png" alt="Login Icon" class="icon"></a>
+                <li><a href="https://www.olympic.org/" target="_blank" rel="noopener" class="bölüm_link">Olympics</a>
                 </li>
-                <li><a href="team2.html" class="bölüm_navlink">Team</a></li>
-                <li><a href="news_feed.html" class="bölüm_navlink">News</a></li>
-                <li><a href="about_us.html" class="bölüm_navlink">About Us</a></li>
-                <li><a href="spielplan.html" class="bölüm_navlink">Spielplan</a></li>
-                <li><a href="arena.html" class="bölüm_navlink">Arena</a></li>
-                <li><a href="sponsoren.html" class="bölüm_navlink">Sponsoren</a></li>
-                <li><a href="merch.html" class="bölüm_navlink">Merch</a></li>
-                <li><a href="faq2.html" class="bölüm_navlink">FAQ</a></li>
             </ul>
-            <!-- Darkmode knopf -->
-            <button id="bölüm_theme-switch">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-            </button>
         </nav>
-        <header>
-            <h1>Sponsoren und Unterstützer</h1>
-            <p>Hier finden Sie unsere Sponsoren von <strong>Wuppertaler Hai!</strong></p>
-            <nav class="bölüm_page-nav">
-                <ul>
-                    <li><a href="#palce1_sponsoren">Unsere Hauptsponsoren</a></li>
-                    <li><a href="#palce2_sponsoren">Goldene Sponsoren</a></li>
-                    <li><a href="#palce3_sponsoren">Silberne Sponsoren</a></li>
-                    <li><a href="#palce4_sponsoren">Members</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Main Content -->
-        <main class="bölüm_page_content">
-            <section>
-                <h2 id="palce1_sponsoren">Unsere Hauptsponsoren</h2>
-                <div class="sponsoren_container">
-                    <a href="https://www.adidas.de"><img src="../bilder/Adidas_Logo_1.png" alt="Adidas logo"></a>
-                    <a href="https://www.volkswagen.de/de.html"><img src="../bilder/Volkswagen_Logo_1.png" alt="Volkswagen logo"></a>
-                    <a href="https://www.apple.com"><img src="../bilder/Apple_Logo_0.svg" alt="Apple_Logo_0 logo"></a>
-                    <a href="https://www.paypal.com/in/home"><img src="../bilder/PayPal_Logo_1.png" alt="Paypal_Logo"></a>
-                </div>
-                <h2 id="palce2_sponsoren">Goldene Sponsoren</h2>
-                <div class="sponsoren_container">
-                    <a href="https://www.manutd.com/en/players-and-staff/first-team"><img src="../bilder/idjaUl7fIp_1741869481395.png" alt="Mancseter logo"></a>
-                    <a href="https://www.mercedes-benz.de"><img src="../bilder/Mercedes-Benz_Logo_1.png" alt="Mercedes-Benz_Logo_1"></a>
-                    <a href="https://www.nba.com"><img src="../bilder/NBA_id-njA-Hob_1.png" alt="nba logo"></a>
-                </div>
-                <h2 id="palce3_sponsoren">Kooperations Partner</h2>
-                <div class="sponsoren_container">
-                    <a href="https://www.th-koeln.de"><img src="../bilder/TH_Köln_idDtqE_N8T_0.png" alt="th Köln logo"></a>
-                    <a href="https://www.paypal.com/in/home"><img src="../bilder/PayPal_Logo_1.png" alt="paypal logo"></a>
-                    <a href="https://www.wsj.com"><img src="../bilder/The_Wall_Street_Journal_id3HBaCHXd_1.png" alt="wasj logo"></a>
-                </div>
-                <h2 id="palce4_sponsoren">Unsere Unterstützer</h2>
-                <p>Unsere Unterstützer sind unsere Vereinmitglieder</p>
-                <div>
-                    <a href="/seiten/login.html"><img src="../bilder/text.svg" alt="Memberszahl" id="memers_zahl"></a>
-                </div>
-            </section>
-        </main>
-        <div class="bölüm_aside-container">
-            <!-- 2 externe hyper Links-->
-            <aside class="bölüm_aside-team">
-                <h3>Hey! Clicke für unser Socials</h3>
-                <p>Folge uns auf unseren Social-Media-Kanälen, um keine Updates, spannende Einblicke und exklusive Inhalte zu verpassen. Wir freuen uns darauf, dich in unserer Community zu begrüßen!</p>
-                <p style="color: blue;">
-                    <a href="https://www.instagram.com/th_koeln/?hl=de" target="_blank">Instagram</a> / 
-                    <a href="https://www.facebook.com/technischehochschulekoeln/?locale=de_DE" target="_blank">Facebook</a>
-                </p>
-            </aside>
-            <!-- 1 interner Hyperlink -->
-            <aside class="bölüm_aside-team">
-                <h3>Hey!  Noch keinen Account?</h3>
-                <p>Erstelle jetzt deinen persönlichen Account und werde Teil unserer Unterwasserhockey-Community! Mit einem Account kannst du dich für Events anmelden, Neuigkeiten erhalten und dich mit anderen Spielern austauschen.</p>
-                <p style="color: blue;"><a href="/seiten/login.html">Jetzt Account erstellen</a></p>
-            </aside>
-        </div>
-        <!-- Footer -->
-        <footer>
-            <!-- Zusätzliche Navigation mit internen und externen Hyperlinks -->
-            <nav>
-                <ul>
-                    <li><a href="kontakt2.html" class="bölüm_navlink">Kontakt</a></li>
-                    <li><a href="impressum2.html" class="bölüm_link">Impressum</a></li>
-                    <li><a href="https://www.wikipedia.org" target="_blank" rel="noopener" class="bölüm_link">Wikipedia</a></li>
-                    <li><a href="https://www.olympic.org/" target="_blank" rel="noopener" class="bölüm_link">Olympics</a></li>
-                </ul>
-            </nav>
-            <p>&copy; 2025 Wuppertaler Haie. Alle Rechte vorbehalten.</p>    
-        </footer>
-    </body>
+        <p>&copy; 2025 Wuppertaler Haie. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+
 </html>
