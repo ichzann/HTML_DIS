@@ -225,7 +225,10 @@ main section h2 {
 	padding-bottom: 5px;
 }
 
-
+.responsive-img {
+    width: 100%;
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+}
 /* -------------------------------
    8. Artikel innerhalb von Sections
    -------------------------------
@@ -542,7 +545,6 @@ Ihsan Css
 	justify-content: center;
 	/* Align the memers (calass="memer")*/
 	margin: auto;
-	padding: auto;
 }
 
 .icon {
