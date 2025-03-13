@@ -134,6 +134,22 @@ nav:first-of-type {
 	width: 100%;
 }
 
+.bölüm_page-nav {
+	display: flex;
+	justify-content: center;
+  }
+  
+  .bölüm_page-nav ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .bölüm_page-nav li {
+	margin: 0 10px; /* Abstand zwischen den Navigationselementen */
+  }
+
 /* -------------------------------
    6. Header-Bereich
    -------------------------------
@@ -206,6 +222,13 @@ article header time {
 	color: var(--secondary-color);
 }
 
+/* Platz über den Übersschriften, damit diese beim den interenen Link angezeigt werden */
+:target {
+    display: block;
+    position: relative;
+    padding-top: 65px; 
+    margin-top: -65px; 
+}
 
 /* -------------------------------
    9. Tabellen
@@ -335,6 +358,23 @@ footer {
 	margin-top: 40px;
 }
 
+footer nav ul {
+	background-color: var(--base-variant);
+	justify-content: center;
+	display: flex;
+	list-style-type: none;
+	padding: 15px;
+}
+
+footer nav ul li {
+	margin: 0 15px;
+  }
+  
+  footer p {
+	text-align: center;
+  }
+  
+  
 
 /* -------------------------------
    15. Responsive Bilder
@@ -383,6 +423,10 @@ body.darkmode header {
 
 body.darkmode footer {
 	background-color: #101425;
+}
+
+body.darkmode .bölüm_page-nav a:hover {
+	color: var(--primary-color);
 }
 
 #bölüm_theme-switch{
