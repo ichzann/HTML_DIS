@@ -106,13 +106,17 @@ nav ul {
 	/* Horizontale Anordnung der Links */
 	flex-wrap: wrap;
 	/* Zeilenumbruch bei kleinen Bildschirmen */
+	justify-content: center;
 }
 
 nav ul li {
 	display: flex;
 	align-items: center;
 	height: 100%;
+	margin: 1px;
 }
+
+
 
 .bölüm_navlink:hover .icon {
 	filter: brightness(1000);
@@ -145,6 +149,8 @@ nav:first-of-type {
 	background-color: var(--base-variant);
 	width: 100%;
 }
+
+
 
 .bölüm_page-nav {
 	display: flex;
@@ -458,8 +464,8 @@ body.darkmode .bölüm_page-nav a:hover {
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	top: 0.5rem;
-	right: 0.5rem;
+	top: 1rem;
+	right: 3rem;
 }
 
 #bölüm_theme-switch svg {
@@ -498,7 +504,7 @@ Ihsan Css
 }
 
 .bölüm_kontak_icon {
-	width: 4.3rem;
+	width: 1rem;
 	height: auto;
 }
 
