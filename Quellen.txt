@@ -30,6 +30,8 @@ Tutorial zu Nav https://developer.mozilla.org/de/docs/Web/HTML/Element/nav
 
 Tutorial zu picture https://www.w3schools.com/tags/tag_picture.asp
 
+Logos auf der sponsoren.html https://brandfetch.com
+
 _______________
 
 -Ende Bölüm-

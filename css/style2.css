@@ -520,3 +520,22 @@ Ihsan Css
 	width: 1.5rem;
 	height: auto;
 }
+
+.sponsoren_container img{
+	max-width: 7rem;
+	height: auto;
+}
+
+.sponsoren_container{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: white;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+#memers_zahl{
+	display: flex;
+	justify-self: center;
+	max-width: 30rem;
+}
