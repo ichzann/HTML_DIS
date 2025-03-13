@@ -1,253 +1,111 @@
-/* =====================================================
-   Custom CSS für Unterwasserhockey Team Website
-   =====================================================
-   Diese CSS-Datei orientiert sich an den Vorgaben aus 
-   style.css und passt sich den Klassen der HTML-Seiten 
-   (z. B. .bölüm_navlink und .bölüm_link) an.
-   Zudem wird eine benutzerdefinierte Schriftart aus 
-   einem Unterordner (fonts) geladen.
-   ===================================================== */
+/* =======================
+   1. Fonts & Farben
+   ======================= */
 
-
-/* -------------------------------
-   1. Schriftart einbinden
-   -------------------------------
-   @font-face bindet eine lokale Schriftart ein, sodass 
-   diese in der gesamten Seite verwendet werden kann.
-   Passe den Pfad und Dateinamen bei Bedarf an.
----------------------------------- */
+/* -- Schriftart einbinden -- */
 @font-face {
-	font-family: 'MyCustomFont';
-	src: url('../fonts/MyCustomFont.woff2') format('woff2'),
-		url('../fonts/MyCustomFont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'MyCustomFont';
+    src: url('../fonts/MyCustomFont.woff2') format('woff2'),
+         url('../fonts/MyCustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-
-/* -------------------------------
-   2. Farbvariablen definieren
-   -------------------------------
-   Durch die Nutzung von CSS-Variablen in :root können 
-   Farben zentral verwaltet werden. Änderungen sind so 
-   an einer Stelle möglich.
----------------------------------- */
+/* -- Farbvariablen (Light / Dark) -- */
 :root {
-	--base-color: white;
-	--base-variant: #e8e9ed;
-	--text-color: #111528;
-	--secondary-color: #232738;
-	--primary-color: #3a435d;
-	--accent-color: #2486ff;
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-color: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #2486ff;
 }
 
 .darkmode {
-	--base-color: #070b1d;
-	--base-variant: #101425;
-	--text-color: #ffffff;
-	--secondary-color: #a4a5b8;
-	--primary-color: #69769c;
-	--accent-color: #2486ff;
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-color: #a4a5b8;
+    --primary-color: #69769c;
+    --accent-color: #2486ff;
 }
 
-
-/* -------------------------------
-   3. Globale Basisstile
-   -------------------------------
-   Hier wird die Grundformatierung für den gesamten Body 
-   festgelegt – Schriftart, Hintergrund, Textfarbe, 
-   Margin und Padding.
----------------------------------- */
+/* =======================
+   2. Globale Basisstile
+   ======================= */
 body {
-	font-family: 'MyCustomFont', system-ui, sans-serif;
-	background-color: var(--base-color);
-	color: var(--text-color);
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
+    font-family: 'MyCustomFont', system-ui, sans-serif;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-
-/* -------------------------------
-   4. Link-Stile
-   -------------------------------
-   Links erhalten die Akzentfarbe und wechseln beim Hover 
-   zu einer anderen Farbe, um Interaktivität zu signalisieren.
----------------------------------- */
+/* Link-Stile */
 a {
-	color: var(--accent-color);
-	text-decoration: none;
-	transition: color 0.3s ease;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-
 a:hover {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
 
-
-/* -------------------------------
-   5. Navigation
-   -------------------------------
-   Das <nav>-Element und dessen untergeordnete UL/LI-Elemente 
-   werden gestylt. Dabei werden auch die speziellen Klassen 
-   .bölüm_navlink und .bölüm_link berücksichtigt.
----------------------------------- */
-nav {
-	background-color: var(--base-variant);
-	padding: 10px;
+/* =======================
+   3. Navigation & Sticky Header
+   ======================= */
+/* Hauptnavigation – direkt im Body stehende navs werden sticky */
+body > nav {
+    background-color: var(--base-variant);
+    padding: 0.625rem; /* 10px */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
+/* Navigation Liste & Elemente */
 nav ul {
-	list-style: none;
-	/* Entfernt Standard-Punkte der Liste */
-	margin: 0;
-	padding: 0;
-	display: flex;
-	/* Horizontale Anordnung der Links */
-	flex-wrap: wrap;
-	/* Zeilenumbruch bei kleinen Bildschirmen */
-	justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-	display: flex;
-	align-items: center;
-	height: 100%;
-	margin: 1px;
+    display: flex;
+    align-items: center;
+    margin: 0.0625rem; /* ca. 1px */
 }
 
-
-
-.bölüm_navlink:hover .icon {
-	filter: brightness(1000);
-}
-
-nav ul li a.bölüm_navlink:hover {
-	background-color: var(--primary-color);
-	color: var(--base-color);
-}
-
-
-/* Styling der spezifischen Navigations-Links */
+/* Navigation Links & Icons */
 .bölüm_navlink,
 .bölüm_link {
-	padding: 8px 12px;
-	border-radius: 4px;
-	/* Abgerundete Ecken für Buttons */
-}
-
-.bölüm_navlink:hover,
-.bölüm_link:hover {
-	background-color: var(--primary-color);
-	color: var(--base-color);
-}
-
-nav:first-of-type {
-	position: sticky;
-	top: 0;
-	z-index: 1000;
-	background-color: var(--base-variant);
-	width: 100%;
-}
-
-
-
-.bölüm_page-nav {
-	display: flex;
-	justify-content: center;
-	z-index : auto;
-	position: relative;
-}
-
-.bölüm_page-nav ul {
-	display: flex;
-	list-style-type: none;
-	padding: 0;
-	z-index : 100;
-	margin: 0;
+    padding: 0.5rem 0.75rem; /* 8px 12px */
+    border-radius: 0.25rem; /* 4px */
 }
 
 .bölüm_page-nav li {
-	margin: 0 10px;
+	margin: 0 0.5rem;
 	z-index: 100;
 	/* Abstand zwischen den Navigationselementen */
 }
 
-/* -------------------------------
-   6. Header-Bereich
-   -------------------------------
-   Der Kopfbereich der Seite wird zentriert und mit einem 
-   Hintergrund versehen, der die Überschrift und Einleitung 
-   hervorhebt.
----------------------------------- */
-header {
-	padding: 20px;
-	background-color: var(--base-variant);
-	text-align: center;
-	position: relative;
-	z-index: 10;
+nav ul li a.bölüm_navlink:hover {
+    background-color: var(--primary-color);
+    color: var(--base-color);
 }
 
-header h1 {
-	margin: 0;
-	font-size: 2em;
-	color: var(--primary-color);
+.bölüm_navlink:hover .icon {
+    filter: brightness(1000);
 }
 
-header p {
-	margin: 10px 0 0;
-	font-size: 1.2em;
-}
-
-
-/* -------------------------------
-   7. Hauptinhalt (main)
-   -------------------------------
-   Der Hauptbereich wird zentriert, bekommt ein maximales 
-   Layout und ausreichend Innenabstand.
----------------------------------- */
-main {
-	max-width: 1000px;
-	margin: 20px auto;
-	padding: 20px;
-}
-
-/* Abstand zwischen den inhaltlichen Sektionen */
-main section {
-	margin-bottom: 40px;
-}
-
-/* Überschriften in den Sektionen */
-main section h2 {
-	color: var(--secondary-color);
-	margin-bottom: 15px;
-	border-bottom: 2px solid var(--accent-color);
-	padding-bottom: 5px;
-}
-
-.responsive-img {
-    width: 100%;
-    height: auto; /* Beibehaltung des Seitenverhältnisses */
-}
-/* -------------------------------
-   8. Artikel innerhalb von Sections
-   -------------------------------
-   Artikel (z. B. in der News- oder Merch-Seite) werden mit 
-   eigenen Abständen und Schriftgrößen formatiert.
----------------------------------- */
-article {
-	margin-bottom: 20px;
-}
-
-article header h3 {
-	margin: 0;
-	font-size: 1.5em;
-	color: var(--primary-color);
-}
-
-article header time {
-	font-size: 0.9em;
-	color: var(--secondary-color);
+.icon {
+	width: 1.5rem;
+	height: auto;
 }
 
 /* Platz über den Übersschriften, damit diese beim den interenen Link angezeigt werden */
@@ -258,298 +116,316 @@ article header time {
 	margin-top: -65px;
 }
 
-/* -------------------------------
-   9. Tabellen
-   -------------------------------
-   Tabellen werden so formatiert, dass sie den verfügbaren 
-   Platz ausnutzen und klare Abstände sowie Rahmen haben.
----------------------------------- */
-table {
-	width: 100%;
-	border-collapse: collapse;
-	margin: 20px 0;
+/* Responsive Anpassung für nav */
+@media (max-width: 600px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Zwei Spalten mit gleicher Breite */
+        gap: 0.3125rem; /* Abstand zwischen den Elementen */
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 0.2rem;
+        width: 100%; /* Volle Breite innerhalb der Grid-Zelle */
+    }
+    
+    .bölüm_navlink,
+    .bölüm_link {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
 }
 
-table caption {
-	font-size: 1.2em;
-	margin-bottom: 10px;
-	text-align: left;
-	color: var(--primary-color);
+/* =======================
+   4. Header-Bereich
+   ======================= */
+header {
+    padding: 1.25rem; /* 20px */
+    background-color: var(--base-variant);
+    text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
-/* Rahmen für Tabelle, Zellen und Kopfzellen */
-table,
-th,
-td {
-	border: 1px solid var(--base-variant);
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--primary-color);
 }
 
-th,
-td {
-	padding: 10px;
-	text-align: left;
+header p {
+    margin: 0.625rem 0 0; /* 10px oben */
+    font-size: 1.2em;
 }
 
-
-/* -------------------------------
-   10. Blockquotes
-   -------------------------------
-   Blockquotes werden mit einem Hintergrund und einer 
-   farbigen Linie hervorgehoben, um Zitate optisch zu 
-   betonen.
----------------------------------- */
-blockquote {
-	background-color: var(--base-variant);
-	border-left: 4px solid var(--accent-color);
-	padding: 10px 20px;
-	margin: 20px 0;
-	font-style: italic;
-	color: var(--secondary-color);
+/* =======================
+   5. Hauptinhalt (Main)
+   ======================= */
+main {
+    max-width: 62.5rem; /* 1000px */
+    margin: 1.25rem auto; /* 20px */
+    padding: 1.25rem; /* 20px */
 }
 
-blockquote p {
-	margin: 0;
+main section {
+    margin-bottom: 2.5rem; /* 40px */
 }
 
+main section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 0.9375rem; /* 15px */
+    border-bottom: 0.125rem solid var(--accent-color); /* 2px */
+    padding-bottom: 0.3125rem; /* 5px */
+}
 
-/* -------------------------------
-   11. Abbildungen und Figuren
-   -------------------------------
-   Bilder in <figure> erhalten einen Abstand, und 
-   Beschriftungen (figcaption) werden zentriert und 
-   farblich angepasst.
----------------------------------- */
+/* =======================
+   6. Bilder & Abbildungen
+   ======================= */
+.responsive-img,
+img {
+    width: 100%;
+    height: auto;
+}
+
 figure {
-	margin: 20px 0;
+    margin: 1.25rem 0; /* 20px */
 }
 
 figcaption {
-	text-align: center;
-	font-size: 0.9em;
-	color: var(--secondary-color);
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--secondary-color);
 }
 
+/* =======================
+   7. Artikel & Zeitangaben
+   ======================= */
+article {
+    margin-bottom: 1.25rem; /* 20px */
+}
 
-/* -------------------------------
-   12. Details-Elemente
-   -------------------------------
-   Mit <details> und <summary> können zusätzliche 
-   Informationen ein- und ausgeblendet werden.
----------------------------------- */
+article header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+article header time {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+}
+
+/* =======================
+   8. Tabellen
+   ======================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0; /* 20px */
+}
+
+table caption {
+    font-size: 1.2em;
+    margin-bottom: 0.625rem; /* 10px */
+    text-align: left;
+    color: var(--primary-color);
+}
+
+table,
+th,
+td {
+    border: 0.0625rem solid var(--base-variant); /* 1px */
+}
+
+th,
+td {
+    padding: 0.625rem; /* 10px */
+    text-align: left;
+}
+
+/* =======================
+   9. Blockquotes & Details
+   ======================= */
+blockquote {
+    background-color: var(--base-variant);
+    border-left: 0.25rem solid var(--accent-color); /* 4px */
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    margin: 1.25rem 0; /* 20px */
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
 details {
-	margin: 20px 0;
-	padding: 10px;
-	background-color: var(--base-variant);
-	border: 1px solid var(--primary-color);
-	border-radius: 4px;
+    margin: 1.25rem 0; /* 20px */
+    padding: 0.625rem; /* 10px */
+    background-color: var(--base-variant);
+    border: 0.0625rem solid var(--primary-color); /* 1px */
+    border-radius: 0.25rem; /* 4px */
 }
 
 details summary {
-	font-weight: bold;
-	cursor: pointer;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-
-/* -------------------------------
-   13. Asides
-   -------------------------------
-   Seitenleisten (aside) werden mit einem eigenen 
-   Hintergrund und Innenabstand hervorgehoben.
----------------------------------- */
+/* =======================
+   10. Asides & Footer
+   ======================= */
 aside {
-	background-color: var(--base-variant);
-	padding: 15px;
-	margin: 20px;
-	border-radius: 4px;
+    background-color: var(--base-variant);
+    padding: 0.9375rem; /* 15px */
+    margin: 1.25rem; /* 20px */
+    border-radius: 0.25rem; /* 4px */
 }
 
 aside h3 {
-	margin-top: 0;
-	color: var(--primary-color);
+    margin-top: 0;
+    color: var(--primary-color);
 }
 
-
-/* -------------------------------
-   14. Footer
-   -------------------------------
-   Der Footer wird zentriert, erhält einen eigenen 
-   Hintergrund sowie einen oberen Rahmen, um ihn 
-   optisch abzugrenzen.
----------------------------------- */
 footer {
-	background-color: var(--base-variant);
-	text-align: center;
-	padding: 15px;
-	font-size: 0.9em;
-	color: var(--secondary-color);
-	border-top: 1px solid var(--base-color);
-	margin-top: 40px;
+    background-color: var(--base-variant);
+    text-align: center;
+    padding: 0.9375rem; /* 15px */
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    border-top: 0.0625rem solid var(--base-color); /* 1px */
+    margin-top: 2.5rem; /* 40px */
 }
 
 footer nav ul {
-	background-color: var(--base-variant);
-	justify-content: center;
-	display: flex;
-	list-style-type: none;
-	padding: 15px;
+    background-color: var(--base-variant);
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+    padding: 0.9375rem; /* 15px */
 }
 
 footer nav ul li {
-	margin: 0 15px;
+    margin: 0 0.9375rem; /* 15px */
 }
 
 footer p {
-	text-align: center;
+    text-align: center;
 }
 
-
-
-/* -------------------------------
-   15. Responsive Bilder
-   -------------------------------
-   Bilder passen sich an den verfügbaren Platz an, ohne 
-   verzerrt zu werden.
----------------------------------- */
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-
-/* -------------------------------
-   16. Utility Klassen
-   -------------------------------
-   Eine einfache clearfix-Klasse, um Floating-Elemente 
-   zu bereinigen.
----------------------------------- */
+/* =======================
+   11. Utility & Nicht verwendete Klassen
+   ======================= */
+/* Die Klasse .clearfix wird aktuell in keinem HTML-Dokument genutzt */
 .clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
-
-/* -------------------------------
-   17. Optional: Dark Mode
-   -------------------------------
-   Falls der Dark Mode aktiviert wird (z. B. durch 
-   Hinzufügen der Klasse "darkmode" zum Body), werden 
-   Hintergrund und Textfarben angepasst.
----------------------------------- */
+/* =======================
+   12. Darkmode Spezifisch
+   ======================= */
 body.darkmode {
-	background-color: #070b1d;
-	color: #ffffff;
+    background-color: #070b1d;
+    color: #ffffff;
 }
 
 body.darkmode a {
-	color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 body.darkmode header {
-	background-color: #101425;
+    background-color: #101425;
 }
 
 body.darkmode footer {
-	background-color: #101425;
+    background-color: #101425;
 }
 
 body.darkmode .bölüm_page-nav a:hover {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
 
+/* Darkmode Umschalter */
 #bölüm_theme-switch {
-	height: 2rem;
-	width: 2rem;
-	padding: 0;
-	border-radius: 50%;
-	background-color: var(--base-variant);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 1rem;
-	right: 3rem;
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #bölüm_theme-switch svg {
-	fill: var(--primary-color);
+    fill: var(--primary-color);
 }
 
 #bölüm_theme-switch svg:last-child {
-	display: none;
+    display: none;
 }
 
 .darkmode #bölüm_theme-switch svg:first-child {
-	display: none;
+    display: none;
 }
 
 .darkmode #bölüm_theme-switch svg:last-child {
-	display: block;
+    display: block;
 }
 
+/* =======================
+   13. Seiten-/Spezifische Anpassungen
+   ======================= */
 
-
-
-/*----------------
-
-Ihsan Css
-
----------------*/
-.bölüm_background_img_titel {
-	text-align: center;
-	color: #fbfbff;
-	margin-bottom: 1.2rem;
-	padding: 6.25rem;
-	background-image: url(/bilder/FAQ.jpg);
-	background-size: cover;
-	background-position: left;
-	max-width: 50rem;
-}
-
-.bölüm_kontak_icon {
-	width: 1rem;
-	height: auto;
-}
-
+/* Team-Seite */
 .bölüm_team-titel {
-	display: flex;
-	padding-right: 2rem;
+    display: flex;
+    padding-right: 2rem;
 }
 
 .bölüm_underwater-hockey-team img {
-	width: 40rem;
-	padding-left: 1rem;
+    width: 40rem;
+    padding-left: 1rem;
 }
 
 .bölüm_team-titel-box {
-	background-color: #babbb839;
-	padding-left: 5%;
-	padding-top: 1%;
-	margin-top: 40px;
-	margin-bottom: 10%;
+    background-color: rgba(186, 187, 184, 0.22);
+    padding-left: 5%;
+    padding-top: 1%;
+    margin-top: 2.5rem; /* 40px */
+    margin-bottom: 0.625rem; /* 10px */
 }
 
-
+/* Team-Mitglieder */
 .bölüm_memers-box img {
-	width: 8rem;
-	align-self: center;
+    width: 8rem;
+    align-self: center;
 }
 
 .bölüm_memer {
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 }
 
 .bölüm_memers {
-	display: flex;
-	justify-content: center;
-	/* Align the memers (calass="memer")*/
-	margin: auto;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
-.icon {
-	width: 1.5rem;
-	height: auto;
+/* Sponsoren */
+.sponsoren_container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+#memers_zahl {
+    display: flex;
+    justify-self: center;
+    max-width: 20rem;
 }
 
 .sponsoren_container img {
@@ -557,16 +433,24 @@ Ihsan Css
 	height: auto;
 }
 
-.sponsoren_container {
-	display: flex;
-	justify-content: space-evenly;
-	background-color: white;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+
+/* FAQ-spezifisch */
+.bölüm_faq-details {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 0.0625rem solid var(--primary-color);
+    border-radius: 0.25rem;
 }
 
-#memers_zahl {
-	display: flex;
-	justify-self: center;
-	max-width: 30rem;
+/* Kontakt */
+.bölüm_kontak_icon {
+	width: 1rem;
+	height: auto;
+}
+
+/* =======================
+   14. Body-spezifische Overrides
+   ======================= */
+.bölüm_body {
+    /* Zusätzliche Anpassungen für spezielle Seiten (z. B. FAQ) können hier erfolgen */
 }

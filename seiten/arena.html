@@ -5,13 +5,15 @@
     <!-- Teammitglieder: Jan Kirschke (Matrikel Nr.: 11409054), M. Ihsan Bölüm (Matrikel Nr.: 11411374), Simon Thein (Matrikel Nr.: 11272298) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Arena – Unterwasserhockey Team</title>
+    <!-- style.css liegt im Ordner "css" relativ zum Ordner "seiten" -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Darkmode-Skript, falls in js/ abgelegt -->
     <script src="../js/darkmode.js" defer></script>
-
 </head>
 
 <body>
+    <!-- Navigation mit Darkmode-Schalter -->
     <nav>
         <ul>
             <li><a href="../index.html" class="bölüm_navlink">
@@ -43,73 +45,49 @@
             </li>
         </ul>
     </nav>
+
+    <!-- Header-Bereich mit Titel und Einleitung -->
     <header>
-        <h1>Login</h1>
-        <p>Melden Sie sich jetzt an und werden Sie ein <strong>Wuppertaler Hai!</strong></p>
-        <nav class="bölüm_page-nav">
-            <ul>
-                <li><a href="#bölüm_team">Login</a></li>
-                <li><a href="#bölüm_geschichte">Socials</a></li>
-                <li><a href="#bölüm_erfolge">Information</a></li>
-                <li><a href="#bölüm_philosophie">Probleme beim Anmelden?</a></li>
-            </ul>
-        </nav>
+        <h1>Unsere Arena</h1>
+        <p>Hier spielt und trainiert unser Team – das Herzstück unseres Erfolgs.</p>
     </header>
-    <!-- Main Content -->
-    <main class="bölüm_page_content">
-        <h1 class="bölüm_background_img_titel">Login</h1>
-        <h2>Willkommen bei Unterwasser-Hockey-Enthusiasten</h2>
-        <div class="bölüm_login_form">
-            <form action="#" method="post">
-                <label for="username"><strong>Benutzername:</strong></label>
-                <input type="text" id="username" name="username" placeholder="Name" required>
 
-                <label for="password"><strong>Passwort:</strong></label>
-                <input type="password" id="password" name="password" placeholder="Passwort" required>
-
-                <button type="submit">Einloggen</button>
-            </form>
-        </div>
-    </main>
-    <div class="bölüm_aside-container">
-        <!-- 2 externe hyper Links-->
-        <aside class="bölüm_aside-team" id="bölüm_aside-login1">
-            <h3>Hey! Clicke für unser Socials</h3>
-            <p>Folge uns auf unseren Social-Media-Kanälen, um keine Updates, spannende Einblicke und exklusive Inhalte
-                zu verpassen. Wir freuen uns darauf, dich in unserer Community zu begrüßen!</p>
+    <!-- Hauptinhalt -->
+    <main>
+        <section>
+            <h2>Das Stadion</h2>
+            <figure>
+                <!-- Bild der Arena; Pfad relativ zum Ordner "seiten" -->
+                <img src="../bilder/arena.png" alt="Arena des Unterwasserhockey Teams" class="responsive-img">
+                <figcaption>Unsere moderne Arena – der Ort, an dem wir spielen und trainieren.</figcaption>
+            </figure>
             <p>
-                <a href="https://www.instagram.com/th_koeln/?hl=de" target="_blank">Instagram</a> /
-                <a href="https://www.facebook.com/technischehochschulekoeln/?locale=de_DE" target="_blank">Facebook</a>
+                In unserer Arena finden nicht nur spannende Spiele statt, sondern auch intensive Trainings, die unseren
+                Teamgeist und unsere Technik fördern.
+                Die moderne Infrastruktur und die großartige Atmosphäre machen die Arena zum idealen Ort für sportliche
+                Höchstleistungen.
             </p>
-        </aside>
-        <!-- 1 interner Hyperlink -->
-        <aside>
-            <h3>Hey! Noch keinen Account?</h3>
-            <p>Erstelle jetzt deinen persönlichen Account und werde Teil unserer Unterwasserhockey-Community! Mit einem
-                Account kannst du dich für Events anmelden, Neuigkeiten erhalten und dich mit anderen Spielern
-                austauschen.</p>
-            <p><a href="login.html">Jetzt Account erstellen</a></p>
-        </aside>
-        <aside>
-            <h3>Probleme beim Anmelden?</h3>
-            <p>Bitte Schreiben Sie uns eine Mail.</p>
-            <p><a href="mailto:wuppertalerhaie@exapmle.com">Mail</a></p>
-        </aside>
-    </div>
+            <p>
+                Ob bei Heimspielen oder in der Trainingsphase – unsere Arena bietet den perfekten Rahmen, um sich
+                sportlich zu messen und gemeinsam zu wachsen.
+            </p>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer>
-        <!-- Zusätzliche Navigation mit internen und externen Hyperlinks -->
         <nav>
             <ul>
-                <li><a href="kontakt.html" class="bölüm_navlink">Kontakt</a></li>
                 <li><a href="impressum.html" class="bölüm_link">Impressum</a></li>
+                <li><a href="kontakt.html" class="bölüm_link">Kontakt</a></li>
+                <li><a href="faq.html" class="bölüm_link">FAQ</a></li>
                 <li><a href="https://www.wikipedia.org" target="_blank" rel="noopener" class="bölüm_link">Wikipedia</a>
                 </li>
                 <li><a href="https://www.olympic.org/" target="_blank" rel="noopener" class="bölüm_link">Olympics</a>
                 </li>
             </ul>
         </nav>
-        <p>&copy; 2025 Wuppertaler Haie. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2025 Unterwasserhockey Team. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
 
