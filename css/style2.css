@@ -36,7 +36,7 @@
 	--base-color: white;
 	--base-variant: #e8e9ed;
 	--text-color: #111528;
-	--secondary-color: #232738;	
+	--secondary-color: #232738;
 	--primary-color: #3a435d;
 	--accent-color: #2486ff;
 }
@@ -109,8 +109,20 @@ nav ul {
 }
 
 nav ul li {
-	margin: 0 10px;
+	display: flex;
+	align-items: center;
+	height: 100%;
 }
+
+.bölüm_navlink:hover .icon {
+	filter: brightness(1000);
+}
+
+nav ul li a.bölüm_navlink:hover {
+	background-color: var(--primary-color);
+	color: var(--base-color);
+}
+
 
 /* Styling der spezifischen Navigations-Links */
 .bölüm_navlink,
@@ -129,26 +141,31 @@ nav ul li {
 nav:first-of-type {
 	position: sticky;
 	top: 0;
-	z-index: 100;
-	background-color: var(--base-variant); 
+	z-index: 1000;
+	background-color: var(--base-variant);
 	width: 100%;
 }
 
 .bölüm_page-nav {
 	display: flex;
 	justify-content: center;
-  }
-  
-  .bölüm_page-nav ul {
+	z-index : auto;
+	position: relative;
+}
+
+.bölüm_page-nav ul {
 	display: flex;
 	list-style-type: none;
 	padding: 0;
+	z-index : 100;
 	margin: 0;
-  }
-  
-  .bölüm_page-nav li {
-	margin: 0 10px; /* Abstand zwischen den Navigationselementen */
-  }
+}
+
+.bölüm_page-nav li {
+	margin: 0 10px;
+	z-index: 100;
+	/* Abstand zwischen den Navigationselementen */
+}
 
 /* -------------------------------
    6. Header-Bereich
@@ -161,6 +178,8 @@ header {
 	padding: 20px;
 	background-color: var(--base-variant);
 	text-align: center;
+	position: relative;
+	z-index: 10;
 }
 
 header h1 {
@@ -224,10 +243,10 @@ article header time {
 
 /* Platz über den Übersschriften, damit diese beim den interenen Link angezeigt werden */
 :target {
-    display: block;
-    position: relative;
-    padding-top: 65px; 
-    margin-top: -65px; 
+	display: block;
+	position: relative;
+	padding-top: 65px;
+	margin-top: -65px;
 }
 
 /* -------------------------------
@@ -368,13 +387,13 @@ footer nav ul {
 
 footer nav ul li {
 	margin: 0 15px;
-  }
-  
-  footer p {
+}
+
+footer p {
 	text-align: center;
-  }
-  
-  
+}
+
+
 
 /* -------------------------------
    15. Responsive Bilder
@@ -429,7 +448,7 @@ body.darkmode .bölüm_page-nav a:hover {
 	color: var(--primary-color);
 }
 
-#bölüm_theme-switch{
+#bölüm_theme-switch {
 	height: 2rem;
 	width: 2rem;
 	padding: 0;
@@ -443,16 +462,19 @@ body.darkmode .bölüm_page-nav a:hover {
 	right: 0.5rem;
 }
 
-#bölüm_theme-switch svg{
+#bölüm_theme-switch svg {
 	fill: var(--primary-color);
 }
-#bölüm_theme-switch svg:last-child{
+
+#bölüm_theme-switch svg:last-child {
 	display: none;
 }
-.darkmode #bölüm_theme-switch svg:first-child{
+
+.darkmode #bölüm_theme-switch svg:first-child {
 	display: none;
 }
-.darkmode #bölüm_theme-switch svg:last-child{
+
+.darkmode #bölüm_theme-switch svg:last-child {
 	display: block;
 }
 
@@ -464,7 +486,7 @@ body.darkmode .bölüm_page-nav a:hover {
 Ihsan Css
 
 ---------------*/
-.bölüm_background_img_titel{
+.bölüm_background_img_titel {
 	text-align: center;
 	color: #fbfbff;
 	margin-bottom: 1.2rem;
@@ -475,58 +497,59 @@ Ihsan Css
 	max-width: 50rem;
 }
 
-.bölüm_kontak_icon{
+.bölüm_kontak_icon {
 	width: 4.3rem;
 	height: auto;
 }
 
-.bölüm_team-titel{
-    display: flex;
+.bölüm_team-titel {
+	display: flex;
 	padding-right: 2rem;
 }
 
-.bölüm_underwater-hockey-team img{
-    width: 40rem;
+.bölüm_underwater-hockey-team img {
+	width: 40rem;
 	padding-left: 1rem;
 }
 
-.bölüm_team-titel-box{
-    background-color: #babbb839;
-    padding-left: 5%;
-    padding-top: 1%;
-    margin-top: 40px;
-    margin-bottom: 10%;
+.bölüm_team-titel-box {
+	background-color: #babbb839;
+	padding-left: 5%;
+	padding-top: 1%;
+	margin-top: 40px;
+	margin-bottom: 10%;
 }
 
 
-.bölüm_memers-box img{
-    width: 8rem;
-    align-self: center;
+.bölüm_memers-box img {
+	width: 8rem;
+	align-self: center;
 }
 
-.bölüm_memer{
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+.bölüm_memer {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 }
 
-.bölüm_memers{
-    display: flex;
-    justify-content: center;  /* Align the memers (calass="memer")*/
-    margin: auto;
-    padding: auto;
+.bölüm_memers {
+	display: flex;
+	justify-content: center;
+	/* Align the memers (calass="memer")*/
+	margin: auto;
+	padding: auto;
 }
 
-.icon{
+.icon {
 	width: 1.5rem;
 	height: auto;
 }
 
-.sponsoren_container img{
+.sponsoren_container img {
 	max-width: 7rem;
 	height: auto;
 }
 
-.sponsoren_container{
+.sponsoren_container {
 	display: flex;
 	justify-content: space-evenly;
 	background-color: white;
@@ -534,7 +557,7 @@ Ihsan Css
 	padding-bottom: 1rem;
 }
 
-#memers_zahl{
+#memers_zahl {
 	display: flex;
 	justify-self: center;
 	max-width: 30rem;
