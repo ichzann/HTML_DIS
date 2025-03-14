@@ -5,13 +5,13 @@
 /* -- Schriftart einbinden -- */
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('../fonts/MyCustomFont.woff2') format('woff2'),
-         url('../fonts/MyCustomFont.woff') format('woff');
+    src: url('../fonts/Geoform-Light.otf') format('woff2'),
+         url('../fonts/Geoform-Medium.otf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-/* -- Farbvariablen (Light / Dark) -- */
+/* -- Farbvariablen (Light-mode / Dark-mode) -- */
 :root {
     --base-color: white;
     --base-variant: #e8e9ed;
@@ -58,7 +58,7 @@ a:hover {
 /* Hauptnavigation – direkt im Body stehende navs werden sticky */
 body > nav {
     background-color: var(--base-variant);
-    padding: 0.625rem; /* 10px */
+    padding: 0.625rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -78,20 +78,19 @@ nav ul {
 nav ul li {
     display: flex;
     align-items: center;
-    margin: 0.0625rem; /* ca. 1px */
+    margin: 0.0625rem;
 }
 
 /* Navigation Links & Icons */
 .bölüm_navlink,
 .bölüm_link {
-    padding: 0.5rem 0.75rem; /* 8px 12px */
-    border-radius: 0.25rem; /* 4px */
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
 }
 
 .bölüm_page-nav li {
 	margin: 0 0.5rem;
 	z-index: 100;
-	/* Abstand zwischen den Navigationselementen */
 }
 
 nav ul li a.bölüm_navlink:hover {
@@ -120,7 +119,7 @@ nav ul li a.bölüm_navlink:hover {
 @media (max-width: 600px) {
     nav ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr; /* Zwei Spalten mit gleicher Breite */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 0.3125rem; /* Abstand zwischen den Elementen */
         width: 100%;
     }
@@ -142,7 +141,7 @@ nav ul li a.bölüm_navlink:hover {
    4. Header-Bereich
    ======================= */
 header {
-    padding: 1.25rem; /* 20px */
+    padding: 1.25rem;
     background-color: var(--base-variant);
     text-align: center;
     position: relative;
@@ -156,7 +155,7 @@ header h1 {
 }
 
 header p {
-    margin: 0.625rem 0 0; /* 10px oben */
+    margin: 0.625rem 0 0;
     font-size: 1.2em;
 }
 
@@ -164,20 +163,20 @@ header p {
    5. Hauptinhalt (Main)
    ======================= */
 main {
-    max-width: 62.5rem; /* 1000px */
-    margin: 1.25rem auto; /* 20px */
-    padding: 1.25rem; /* 20px */
+    max-width: 62.5rem;
+    margin: 1.25rem auto;
+    padding: 1.25rem;
 }
 
 main section {
-    margin-bottom: 2.5rem; /* 40px */
+    margin-bottom: 2.5rem;
 }
 
 main section h2 {
     color: var(--secondary-color);
-    margin-bottom: 0.9375rem; /* 15px */
-    border-bottom: 0.125rem solid var(--accent-color); /* 2px */
-    padding-bottom: 0.3125rem; /* 5px */
+    margin-bottom: 0.9375rem;
+    border-bottom: 0.125rem solid var(--accent-color);
+    padding-bottom: 0.3125rem;
 }
 
 /* =======================
@@ -190,7 +189,7 @@ img {
 }
 
 figure {
-    margin: 1.25rem 0; /* 20px */
+    margin: 1.25rem 0;
 }
 
 figcaption {
@@ -203,7 +202,7 @@ figcaption {
    7. Artikel & Zeitangaben
    ======================= */
 article {
-    margin-bottom: 1.25rem; /* 20px */
+    margin-bottom: 1.25rem;
 }
 
 article header h3 {
@@ -223,12 +222,12 @@ article header time {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.25rem 0; /* 20px */
+    margin: 1.25rem 0;
 }
 
 table caption {
     font-size: 1.2em;
-    margin-bottom: 0.625rem; /* 10px */
+    margin-bottom: 0.625rem;
     text-align: left;
     color: var(--primary-color);
 }
@@ -236,12 +235,12 @@ table caption {
 table,
 th,
 td {
-    border: 0.0625rem solid var(--base-variant); /* 1px */
+    border: 0.0625rem solid var(--base-variant);
 }
 
 th,
 td {
-    padding: 0.625rem; /* 10px */
+    padding: 0.625rem;
     text-align: left;
 }
 
@@ -250,19 +249,19 @@ td {
    ======================= */
 blockquote {
     background-color: var(--base-variant);
-    border-left: 0.25rem solid var(--accent-color); /* 4px */
-    padding: 0.625rem 1.25rem; /* 10px 20px */
-    margin: 1.25rem 0; /* 20px */
+    border-left: 0.25rem solid var(--accent-color);
+    padding: 0.625rem 1.25rem;
+    margin: 1.25rem 0;
     font-style: italic;
     color: var(--secondary-color);
 }
 
 details {
-    margin: 1.25rem 0; /* 20px */
-    padding: 0.625rem; /* 10px */
+    margin: 1.25rem 0;
+    padding: 0.625rem;
     background-color: var(--base-variant);
-    border: 0.0625rem solid var(--primary-color); /* 1px */
-    border-radius: 0.25rem; /* 4px */
+    border: 0.0625rem solid var(--primary-color);
+    border-radius: 0.25rem;
 }
 
 details summary {
@@ -275,9 +274,9 @@ details summary {
    ======================= */
 aside {
     background-color: var(--base-variant);
-    padding: 0.9375rem; /* 15px */
-    margin: 1.25rem; /* 20px */
-    border-radius: 0.25rem; /* 4px */
+    padding: 0.9375rem;
+    margin: 1.25rem;
+    border-radius: 0.25rem;
 }
 
 aside h3 {
@@ -288,11 +287,11 @@ aside h3 {
 footer {
     background-color: var(--base-variant);
     text-align: center;
-    padding: 0.9375rem; /* 15px */
+    padding: 0.9375rem;
     font-size: 0.9em;
     color: var(--secondary-color);
-    border-top: 0.0625rem solid var(--base-color); /* 1px */
-    margin-top: 2.5rem; /* 40px */
+    border-top: 0.0625rem solid var(--base-color);
+    margin-top: 2.5rem;
 }
 
 footer nav ul {
@@ -300,11 +299,11 @@ footer nav ul {
     justify-content: center;
     display: flex;
     list-style-type: none;
-    padding: 0.9375rem; /* 15px */
+    padding: 0.9375rem;
 }
 
 footer nav ul li {
-    margin: 0 0.9375rem; /* 15px */
+    margin: 0 0.9375rem;
 }
 
 footer p {
@@ -392,8 +391,8 @@ body.darkmode .bölüm_page-nav a:hover {
     background-color: rgba(186, 187, 184, 0.22);
     padding-left: 5%;
     padding-top: 1%;
-    margin-top: 2.5rem; /* 40px */
-    margin-bottom: 0.625rem; /* 10px */
+    margin-top: 2.5rem;
+    margin-bottom: 0.625rem;
 }
 
 /* Team-Mitglieder */
@@ -446,11 +445,4 @@ body.darkmode .bölüm_page-nav a:hover {
 .bölüm_kontak_icon {
 	width: 1rem;
 	height: auto;
-}
-
-/* =======================
-   14. Body-spezifische Overrides
-   ======================= */
-.bölüm_body {
-    /* Zusätzliche Anpassungen für spezielle Seiten (z. B. FAQ) können hier erfolgen */
 }
